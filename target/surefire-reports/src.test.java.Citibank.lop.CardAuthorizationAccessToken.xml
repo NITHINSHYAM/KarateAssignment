@@ -1,0 +1,26 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/CardAuthorizationAccessToken.feature" skipped="0" tests="1" time="9.911253">
+  <testcase classname="src.test.java.Citibank.lop.CardAuthorizationAccessToken" name="fetch access token  from  Citi BANK Sandbox" time="9.911253">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/cardAuth/oauth2/token/sg/gcb' . passed
+And header Authorization = 'Basic ZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5Olk4eVAzYk43Z1MzbFEwYUMzd0UwcVkzb0M0Z1Uwa0swc0kxdUk1aEY2d0Y2cUw0a0Ez' . passed
+And header Content-Type = 'application/x-www-form-urlencoded' ............. passed
+And header Accept = 'application/json' .................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+And form field grant_type = 'card_authorization' .......................... passed
+And form field controlFlowId = ControlflowId1 ............................. passed
+And form field linkageConfirmationCode = '987654' ......................... passed
+And form field scope = 'lop_booking' ...................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.token_type == '#string' .................................. passed
+* match response.access_token == '#string' ................................ passed
+* def tokenType = response.token_type ..................................... passed
+* def accessToken = response.access_token ................................. passed
+* def access_token = tokenType+' '+accessToken ............................ passed
+* print access_token ...................................................... passed
+* print '*********AccessTokenGenerated*********' .......................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.com.demo.Sample</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">2</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2020-07-15 04:39:05 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:3]">[1:3] To verify the whether we able to define and update the variable </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:19]">[2:19] To varify whether we able to update value in Json file </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/demo/Sample.feature</span><span class="feature-description">Update JSON file</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:3]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:3]</span><span class="scenario-name">To verify the whether we able to define and update the variable </span>
+</div>
+<div class="scenario-time passed">ms: 60</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">* def myJson = { empId: 'M11' }</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* set myJson.name = 'John'</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* set myJson.phone = 954343458</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">* set myJson.role =  'Test'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* print myJson</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="5">16:39:04.941 [print] {
+  "empId": "M11",
+  "name": "John",
+  "phone": 954343458,
+  "role": "Test"
+}</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* match myJson == {empId:'M11', name: 'John', phone:954343458, role:'Test'}</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># update</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* set myJson.empId = 'M12'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* print myJson</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="8">16:39:04.953 [print] {
+  "empId": "M12",
+  "name": "John",
+  "phone": 954343458,
+  "role": "Test"
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># Add a new key</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* set myJson $.address = 'Chennai'</div>
+</div>
+<div class="time-cell passed">16</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* print myJson</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="10">16:39:04.969 [print] {
+  "empId": "M12",
+  "name": "John",
+  "phone": 954343458,
+  "role": "Test",
+  "address": "Chennai"
+}</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* match myJson.address == 'Chennai'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:19]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:19]</span><span class="scenario-name">To varify whether we able to update value in Json file </span>
+</div>
+<div class="scenario-time passed">ms: 63</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* def val = '456NewValue115'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* def jsonFile = read('classpath:com/demo/Update.json')</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* set jsonFile.DynamicValue = val</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* print jsonFile</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="15">16:39:05.029 [print] {
+  "empId": "12345",
+  "Name": "John",
+  "Address": "Chennai",
+  "DynamicValue": "456NewValue115"
+}</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">* def otpRequest = read('classpath:com/demo/OTPValidationRequest.json')</div>
+</div>
+<div class="time-cell passed">41</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* print otpRequest</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="17">16:39:05.072 [print] {
+  "otpDeliveryOption": "SMS",
+  "otpToken": "77219F78B16B130E4894E768F08567F06470F59AAC12722D943276877C30567E8E78462F03F3D2BE5679E1AC109530F1CE7F340DB5DB342AEC0C822777D3C3B3B751A7850FAE738FF8DFCB6C805650FD0FBA90FF8E8F4A16AA1A6DC74C44A39B23512336F02C70C02D5BFCF0FAEA4170F98812B3FA9D21DE8239B300A0FFF259",
+  "transactionMemo": "ENROLLCARD",
+  "controlFlowId": "GzEa2T2WiDVPevsGxptJdS316ZlPuDMngTm4rL36"
+}</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* set otpRequest.controlFlowId = val</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">* print otpRequest</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="19">16:39:05.074 [print] {
+  "otpDeliveryOption": "SMS",
+  "otpToken": "77219F78B16B130E4894E768F08567F06470F59AAC12722D943276877C30567E8E78462F03F3D2BE5679E1AC109530F1CE7F340DB5DB342AEC0C822777D3C3B3B751A7850FAE738FF8DFCB6C805650FD0FBA90FF8E8F4A16AA1A6DC74C44A39B23512336F02C70C02D5BFCF0FAEA4170F98812B3FA9D21DE8239B300A0FFF259",
+  "transactionMemo": "ENROLLCARD",
+  "controlFlowId": "456NewValue115"
+}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

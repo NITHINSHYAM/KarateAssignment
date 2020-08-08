@@ -1,0 +1,26 @@
+<testsuite failures="0" name="src/test/java/Citibank/Accounts/redemption.feature" skipped="0" tests="1" time="6.181559">
+  <testcase classname="src.test.java.Citibank.Accounts.redemption" name="Redemption" time="6.181559">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def redemptionRequest = read('classpath:Citibank/Accounts/redemptionRequest.json') . passed
+* call read('classpath:Citibank/Accounts/accessToken.feature') ............ passed
+* call read('classpath:Citibank/Accounts/rewardlinkage.feature') .......... passed
+* call read('classpath:Citibank/Accounts/rewardLinkageActivation.feature') . passed
+* call read('classpath:Citibank/Accounts/pointBalanceInquiry.feature') .... passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/'+rewardLinkCode+'/redemption' . passed
+And header client_id = 'cf652567-f5be-4d34-a77f-98374ee4b293' ............. passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header Content-Type = 'application/json' .............................. passed
+And header Authorization = accessToken .................................... passed
+And request redemptionRequest ............................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+And match response.orderId == '#string' ................................... passed
+* def availablePointBalance = response.availablePointBalance .............. passed
+* def pointsAfterRedemption = call read('classpath:Citibank/Accounts/pointBalanceInquiry.feature') . passed
+And match pointsAfterRedemption.availablePointBalance == availablePointBalance . passed
+* print availablePointBalance ............................................. passed
+* print pointsAfterRedemption.availablePointBalance ....................... passed</system-out>
+  </testcase>
+</testsuite>

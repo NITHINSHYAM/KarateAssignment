@@ -1,0 +1,36 @@
+<testsuite failures="0" name="src/test/java/com/demo/Sample.feature" skipped="0" tests="2" time="0.122474">
+  <testcase classname="src.test.java.com.demo.Sample" name="To verify the whether we able to define and update the variable" time="0.059946">
+    <system-out>* def myJson = { empId: 'M11' } ........................................... passed
+* set myJson.name = 'John' ................................................ passed
+* set myJson.phone = 954343458 ............................................ passed
+* set myJson.role =  'Test' ............................................... passed
+* print myJson ............................................................ passed
+* match myJson == {empId:'M11', name: 'John', phone:954343458, role:'Test'} . passed
+* set myJson.empId = 'M12' ................................................ passed
+* print myJson ............................................................ passed
+* set myJson $.address = 'Chennai' ........................................ passed
+* print myJson ............................................................ passed
+* match myJson.address == 'Chennai' ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.com.demo.Sample" name="To varify whether we able to update value in Json file" time="0.062527">
+    <system-out>* def myJson = { empId: 'M11' } ........................................... passed
+* set myJson.name = 'John' ................................................ passed
+* set myJson.phone = 954343458 ............................................ passed
+* set myJson.role =  'Test' ............................................... passed
+* print myJson ............................................................ passed
+* match myJson == {empId:'M11', name: 'John', phone:954343458, role:'Test'} . passed
+* set myJson.empId = 'M12' ................................................ passed
+* print myJson ............................................................ passed
+* set myJson $.address = 'Chennai' ........................................ passed
+* print myJson ............................................................ passed
+* match myJson.address == 'Chennai' ....................................... passed
+* def val = '456NewValue115' .............................................. passed
+* def jsonFile = read('classpath:com/demo/Update.json') ................... passed
+* set jsonFile.DynamicValue = val ......................................... passed
+* print jsonFile .......................................................... passed
+* def otpRequest = read('classpath:com/demo/OTPValidationRequest.json') ... passed
+* print otpRequest ........................................................ passed
+* set otpRequest.controlFlowId = val ...................................... passed
+* print otpRequest ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

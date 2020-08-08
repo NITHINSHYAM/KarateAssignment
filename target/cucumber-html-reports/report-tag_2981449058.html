@@ -1,0 +1,7428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Tag: @Transactions_Positive</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>mobile</td>
+            <td>08 Aug 2020, 18:57</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@Transactions_Positive</td>
+          <td      class="passed"    >208</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">208</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="21578496000">21.578</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_14_2849948813.html">com/assignment3/Karate_Sathya/Transaction_API.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_2981449058.html">@Transactions_Positive</a>
+      </div>
+
+  
+  <span class="lead-duration duration">21.578</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Initiate the Transactions API with valid fields and verify the Expected Result</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">call read('classpath:com/assignment3/karate_Sathya/Accounts_API.feature@Accounts_Positive')</span>
+  
+  <span class="lead-duration duration">5.875</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/assignment3/karate_Sathya/Accounts_API.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">call read('classpath:reusable.feature')</span>
+  
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;</span>
+  <span class="name">reusable.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def randomString =</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>function(s) {
+var text = &quot;&quot;;
+var possible = &quot;1234-567-890&quot;;
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def requestId = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def now =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>function(){ return java.lang.System.currentTimeMillis() }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def currentTime = now()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def randomUUID =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>function(){ return java.util.UUID.randomUUID() + '' }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def uuid = randomUUID()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def SimpleDateFormatDate = getDate()</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def jsessionIDSplit =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>function(list)
+{
+ var session=list.split(&quot; &quot;, 14);
+ return session
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def sleep = function(millis){ java.lang.Thread.sleep(millis) }</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def internatiocnalDateFormat =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def yesterday =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def futureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def randomFutureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def weekEnd =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json')</span>
+  
+  <span class="lead-duration duration">0.009</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive')</span>
+  
+  <span class="lead-duration duration">4.601</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;</span>
+  <span class="name">com/assignment3/karate_Sathya/Password_API.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">call read('classpath:reusable.feature')</span>
+  
+  <span class="lead-duration duration">0.183</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;</span>
+  <span class="name">reusable.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def randomString =</span>
+  
+  <span class="lead-duration duration">0.086</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>function(s) {
+var text = &quot;&quot;;
+var possible = &quot;1234-567-890&quot;;
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def requestId = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def now =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details">
+        <pre>function(){ return java.lang.System.currentTimeMillis() }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def currentTime = now()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def randomUUID =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>function(){ return java.util.UUID.randomUUID() + '' }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def uuid = randomUUID()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def SimpleDateFormatDate = getDate()</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def jsessionIDSplit =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details">
+        <pre>function(list)
+{
+ var session=list.split(&quot; &quot;, 14);
+ return session
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def sleep = function(millis){ java.lang.Thread.sleep(millis) }</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def internatiocnalDateFormat =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def yesterday =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-19">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def futureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def randomFutureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def weekEnd =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json')</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">call read('classpath:com/assignment3/karate_Sathya/Client_Credentials_API.feature@CardAuth_Positive')</span>
+  
+  <span class="lead-duration duration">1.051</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;</span>
+  <span class="name">com/assignment3/karate_Sathya/Client_Credentials_API.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">call read('classpath:reusable.feature')</span>
+  
+  <span class="lead-duration duration">0.043</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;</span>
+  <span class="name">reusable.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomString =</span>
+  
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-23">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details">
+        <pre>function(s) {
+var text = &quot;&quot;;
+var possible = &quot;1234-567-890&quot;;
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def requestId = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.015</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def now =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>function(){ return java.lang.System.currentTimeMillis() }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def currentTime = now()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomUUID =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-25">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-25" class="collapse collapsable-details">
+        <pre>function(){ return java.util.UUID.randomUUID() + '' }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def uuid = randomUUID()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-26">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-26" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def SimpleDateFormatDate = getDate()</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def jsessionIDSplit =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>function(list)
+{
+ var session=list.split(&quot; &quot;, 14);
+ return session
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def sleep = function(millis){ java.lang.Thread.sleep(millis) }</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def internatiocnalDateFormat =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def yesterday =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-29">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-29" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def futureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomFutureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-31">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-31" class="collapse collapsable-details">
+        <pre>function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def weekEnd =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-32">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-32" class="collapse collapsable-details">
+        <pre>function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json')</span>
+  
+  <span class="lead-duration duration">0.024</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; Given</span>
+  <span class="name">url testData.baseURI + testData.CardAuthResource</span>
+  
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header Authorization = testData.base64</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header Content-Type = testData.Content_Type</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header Accept = testData.accept</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header uuid = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">form field grant_type = testData.Grant_Type</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">form field scope = testData.Scope</span>
+  
+  <span class="lead-duration duration">0.031</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">0.793</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>18:57:07.432 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/bh/gcb
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic M2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1OkEzbkMxZVU3ZVY2aE44dFIwbkwzakkxY1MxZU41bVQzbEU2aFU3d1A0bVU4dUI0aFM2
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 42
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+1 &gt; uuid: 504186988796439-98-3
+grant_type=client_credentials&amp;scope=%2Fapi
+
+18:57:08.222 response time in milliseconds: 789.68
+1 &lt; 200
+1 &lt; Accept: application/json
+1 &lt; Access-Control-Allow-Methods: POST
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Expose-Headers: APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; Authorization: Basic M2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1OkEzbkMxZVU3ZVY2aE44dFIwbkwzakkxY1MxZU41bVQzbEU2aFU3d1A0bVU4dUI0aFM2
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 393
+1 &lt; Content-Type: [application/json, application/json]
+1 &lt; Date: Sat, 08 Aug 2020 13:27:08 GMT
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Sat, 08-Aug-2020 13:47:08 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; X-Akamai-True-Client-IP: 157.50.2.223
+1 &lt; X-Archived-Client-IP: 23.199.49.45,23.199.49.45,169.175.61.93
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Client-IP: 23.199.49.45,169.175.61.93,169.177.209.50
+1 &lt; X-DataStream-Session-Id: 1d14929-5f2ea82b-38039a65
+1 &lt; X-Forwarded-For: 157.50.2.223, 23.203.63.7
+1 &lt; X-Global-Transaction-ID: ddade3ba5f2ea82bfe9e8f7f
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,59;
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; businessCode: GCB
+1 &lt; channelId: SSA
+1 &lt; client_id: 3d343d89-f4f0-4d49-9dc5-ca52b1e07135,3d343d89-f4f0-4d49-9dc5-ca52b1e07135
+1 &lt; client_secret: A3nC1eU7eV6hN8tR0nL3jI1cS1eN5mT3lE6hU7wP4mU8uB4hS6
+1 &lt; countryCode: BH
+1 &lt; dmz-global-txn-id: ddade3ba5f2ea82bfe9e8f7f
+1 &lt; scope: /api
+1 &lt; uuid: 504186988796439-98-3
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1S5KJGkofYW8XVMDLy-VSxRQtg04PyOkyoOFf2RRVGKUlKooIl-Aaxt9WQnf48yiCR5ayMLNZWvwss34c_Y974mk9EHC0A7YNDpDwzNVBnXp9X0Mli8MEojB8fA5bF5YyrYzB9ZNBgnx0ulhVS_5-VIRvz1M__1NQTL__1rz3qzBumoqroz2mGplgO2YXMNf7E1EMqIHmicErybBnhsdp6SCA5yxh0uOvsSpUEKyuUt0&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1596893228, &quot;scope&quot;:&quot;/api&quot; }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">match responseType == 'json'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details">
+        <pre>18:57:08.223 [print] {
+  &quot;access_token&quot;: &quot;AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1S5KJGkofYW8XVMDLy-VSxRQtg04PyOkyoOFf2RRVGKUlKooIl-Aaxt9WQnf48yiCR5ayMLNZWvwss34c_Y974mk9EHC0A7YNDpDwzNVBnXp9X0Mli8MEojB8fA5bF5YyrYzB9ZNBgnx0ulhVS_5-VIRvz1M__1NQTL__1rz3qzBumoqroz2mGplgO2YXMNf7E1EMqIHmicErybBnhsdp6SCA5yxh0uOvsSpUEKyuUt0&quot;,
+  &quot;scope&quot;: &quot;/api&quot;,
+  &quot;consented_on&quot;: 1596893228,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: 1800
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">match response.token_type == '#string'</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">match response.access_token == '#present'</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def tokenType = response.token_type</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def accessToken = response.access_token</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def accessToken = tokenType+' '+accessToken</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">print accessToken</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-35">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details">
+        <pre>18:57:08.234 [print] Bearer AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1S5KJGkofYW8XVMDLy-VSxRQtg04PyOkyoOFf2RRVGKUlKooIl-Aaxt9WQnf48yiCR5ayMLNZWvwss34c_Y974mk9EHC0A7YNDpDwzNVBnXp9X0Mli8MEojB8fA5bF5YyrYzB9ZNBgnx0ulhVS_5-VIRvz1M__1NQTL__1rz3qzBumoqroz2mGplgO2YXMNf7E1EMqIHmicErybBnhsdp6SCA5yxh0uOvsSpUEKyuUt0</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">print &quot;Access Token Generated&quot;</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>18:57:08.236 [print] Access Token Generated</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@e2eKey_Positive')</span>
+  
+  <span class="lead-duration duration">2.064</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;</span>
+  <span class="name">com/assignment3/karate_Sathya/Password_API.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">call read('classpath:reusable.feature')</span>
+  
+  <span class="lead-duration duration">0.028</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;</span>
+  <span class="name">reusable.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomString =</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-37">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-37" class="collapse collapsable-details">
+        <pre>function(s) {
+var text = &quot;&quot;;
+var possible = &quot;1234-567-890&quot;;
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def requestId = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def now =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-38">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-38" class="collapse collapsable-details">
+        <pre>function(){ return java.lang.System.currentTimeMillis() }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def currentTime = now()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomUUID =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-39">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details">
+        <pre>function(){ return java.util.UUID.randomUUID() + '' }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def uuid = randomUUID()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-40">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-40" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def SimpleDateFormatDate = getDate()</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def jsessionIDSplit =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-41">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-41" class="collapse collapsable-details">
+        <pre>function(list)
+{
+ var session=list.split(&quot; &quot;, 14);
+ return session
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def sleep = function(millis){ java.lang.Thread.sleep(millis) }</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def internatiocnalDateFormat =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-42">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-42" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def yesterday =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-43">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-43" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def futureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-44">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-44" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomFutureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-45">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-45" class="collapse collapsable-details">
+        <pre>function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def weekEnd =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-46">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-46" class="collapse collapsable-details">
+        <pre>function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json')</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">call read('classpath:com/assignment3/karate_Sathya/Client_Credentials_API.feature@CardAuth_Positive')</span>
+  
+  <span class="lead-duration duration">1.154</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;</span>
+  <span class="name">com/assignment3/karate_Sathya/Client_Credentials_API.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">call read('classpath:reusable.feature')</span>
+  
+  <span class="lead-duration duration">0.312</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;</span>
+  <span class="name">reusable.feature</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomString =</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-47">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-47" class="collapse collapsable-details">
+        <pre>function(s) {
+var text = &quot;&quot;;
+var possible = &quot;1234-567-890&quot;;
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def requestId = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def now =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-48">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-48" class="collapse collapsable-details">
+        <pre>function(){ return java.lang.System.currentTimeMillis() }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def currentTime = now()</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomUUID =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-49">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-49" class="collapse collapsable-details">
+        <pre>function(){ return java.util.UUID.randomUUID() + '' }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def uuid = randomUUID()</span>
+  
+  <span class="lead-duration duration">0.293</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-50">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-50" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def SimpleDateFormatDate = getDate()</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def jsessionIDSplit =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-51">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-51" class="collapse collapsable-details">
+        <pre>function(list)
+{
+ var session=list.split(&quot; &quot;, 14);
+ return session
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def sleep = function(millis){ java.lang.Thread.sleep(millis) }</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def internatiocnalDateFormat =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-52">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-52" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def yesterday =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-53">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-53" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def futureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-54">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-54" class="collapse collapsable-details">
+        <pre>function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def randomFutureDate =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-55">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-55" class="collapse collapsable-details">
+        <pre>function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def weekEnd =</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-56">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-56" class="collapse collapsable-details">
+        <pre>function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json')</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; Given</span>
+  <span class="name">url testData.baseURI + testData.CardAuthResource</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">header Authorization = testData.base64</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">header Content-Type = testData.Content_Type</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">header Accept = testData.accept</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">header uuid = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">form field grant_type = testData.Grant_Type</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">form field scope = testData.Scope</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">0.815</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-57">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-57" class="collapse collapsable-details">
+        <pre>18:57:08.627 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/bh/gcb
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic M2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1OkEzbkMxZVU3ZVY2aE44dFIwbkwzakkxY1MxZU41bVQzbEU2aFU3d1A0bVU4dUI0aFM2
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 42
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+1 &gt; uuid: 816170023802-5215619
+grant_type=client_credentials&amp;scope=%2Fapi
+
+18:57:09.433 response time in milliseconds: 807.42
+1 &lt; 200
+1 &lt; Accept: application/json
+1 &lt; Access-Control-Allow-Methods: POST
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Expose-Headers: APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; Authorization: Basic M2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1OkEzbkMxZVU3ZVY2aE44dFIwbkwzakkxY1MxZU41bVQzbEU2aFU3d1A0bVU4dUI0aFM2
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 393
+1 &lt; Content-Type: [application/json, application/json]
+1 &lt; Cookie: CITI_SITE=gtdc
+1 &lt; Date: Sat, 08 Aug 2020 13:27:09 GMT
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Sat, 08-Aug-2020 13:47:09 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; X-Akamai-True-Client-IP: 157.50.2.223
+1 &lt; X-Archived-Client-IP: 23.199.49.45,23.199.49.45,169.175.115.119
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Client-IP: 23.199.49.45,169.175.115.119,153.40.245.129
+1 &lt; X-DataStream-Session-Id: 1d14929-5f2ea82c-3803a4f8
+1 &lt; X-Forwarded-For: 157.50.2.223, 23.203.63.7
+1 &lt; X-Global-Transaction-ID: 98b6a3705f2ea82dfc982841
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,57;
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; businessCode: GCB
+1 &lt; channelId: SSA
+1 &lt; client_id: 3d343d89-f4f0-4d49-9dc5-ca52b1e07135,3d343d89-f4f0-4d49-9dc5-ca52b1e07135
+1 &lt; client_secret: A3nC1eU7eV6hN8tR0nL3jI1cS1eN5mT3lE6hU7wP4mU8uB4hS6
+1 &lt; countryCode: BH
+1 &lt; dmz-global-txn-id: 98b6a3705f2ea82dfc982841
+1 &lt; scope: /api
+1 &lt; uuid: 816170023802-5215619
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1uN6Q_MMZV9NjOuweBWypIt4P1DwgcdaDskNQ8uixzKI7AnbNntjPvkUozqUr34NV2l0UncN-5le-7tHfotfG6IgfA1fmbrHMweZrt_rwLFT7qCUPAlz5h5yw4meNw8WSR2X6gyIGmLxsuAzFGYjBMTTx47VRSGjSOER7JBvs3908Z5hvJiAQh5U8m32CJ2TgX520l0soRXd1-k_ouy2CPu7Bc3bNrLjpPbeZvSlB9j8&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1596893229, &quot;scope&quot;:&quot;/api&quot; }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; And</span>
+  <span class="name">match responseType == 'json'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-58">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-58" class="collapse collapsable-details">
+        <pre>18:57:09.433 [print] {
+  &quot;access_token&quot;: &quot;AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1uN6Q_MMZV9NjOuweBWypIt4P1DwgcdaDskNQ8uixzKI7AnbNntjPvkUozqUr34NV2l0UncN-5le-7tHfotfG6IgfA1fmbrHMweZrt_rwLFT7qCUPAlz5h5yw4meNw8WSR2X6gyIGmLxsuAzFGYjBMTTx47VRSGjSOER7JBvs3908Z5hvJiAQh5U8m32CJ2TgX520l0soRXd1-k_ouy2CPu7Bc3bNrLjpPbeZvSlB9j8&quot;,
+  &quot;scope&quot;: &quot;/api&quot;,
+  &quot;consented_on&quot;: 1596893229,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: 1800
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">match response.token_type == '#string'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">match response.access_token == '#present'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def tokenType = response.token_type</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def accessToken = response.access_token</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">def accessToken = tokenType+' '+accessToken</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">print accessToken</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-59">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-59" class="collapse collapsable-details">
+        <pre>18:57:09.433 [print] Bearer AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1uN6Q_MMZV9NjOuweBWypIt4P1DwgcdaDskNQ8uixzKI7AnbNntjPvkUozqUr34NV2l0UncN-5le-7tHfotfG6IgfA1fmbrHMweZrt_rwLFT7qCUPAlz5h5yw4meNw8WSR2X6gyIGmLxsuAzFGYjBMTTx47VRSGjSOER7JBvs3908Z5hvJiAQh5U8m32CJ2TgX520l0soRXd1-k_ouy2CPu7Bc3bNrLjpPbeZvSlB9j8</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt;&gt; *</span>
+  <span class="name">print &quot;Access Token Generated&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-60">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-60" class="collapse collapsable-details">
+        <pre>18:57:09.433 [print] Access Token Generated</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; Given</span>
+  <span class="name">url testData.baseURI + testData.e2eKey_Resource</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header Authorization = accessToken</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header client_id = testData.client_Id</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header client_secret = testData.client_Secret</span>
+  
+  <span class="lead-duration duration">0.015</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header uuid = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header Content-Type = testData.Content_Type_e2eKey</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header Accept = testData.accept</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header countryCode = testData.country_Code</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header businessCode = testData.business_Code</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">header channelId = testData.channel_Id</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">0.822</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-61">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-61" class="collapse collapsable-details">
+        <pre>18:57:09.474 request:
+1 &gt; GET https://sandbox.apihub.citi.com/gcb/api/security/e2eKey
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1uN6Q_MMZV9NjOuweBWypIt4P1DwgcdaDskNQ8uixzKI7AnbNntjPvkUozqUr34NV2l0UncN-5le-7tHfotfG6IgfA1fmbrHMweZrt_rwLFT7qCUPAlz5h5yw4meNw8WSR2X6gyIGmLxsuAzFGYjBMTTx47VRSGjSOER7JBvs3908Z5hvJiAQh5U8m32CJ2TgX520l0soRXd1-k_ouy2CPu7Bc3bNrLjpPbeZvSlB9j8
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Type: application/json
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+1 &gt; businessCode: GCB
+1 &gt; channelId: SSA
+1 &gt; client_id: 3d343d89-f4f0-4d49-9dc5-ca52b1e07135
+1 &gt; client_secret: A3nC1eU7eV6hN8tR0nL3jI1cS1eN5mT3lE6hU7wP4mU8uB4hS6
+1 &gt; countryCode: PL
+1 &gt; uuid: 71-45627573-02--5-20
+
+18:57:10.292 response time in milliseconds: 817.09
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Expose-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 545
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 08 Aug 2020 13:27:10 GMT
+1 &lt; Server: Apache-Coyote/1.1
+1 &lt; Set-Cookie: [CITI_SITE=gtdc, CITI_SITE=gtdc; expires=Sat, 08-Aug-2020 13:47:10 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly]
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f2ea82d71131fcf
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,58;
+1 &lt; bizToken: ZHqEc3WpXYdrEXbOKbmjayXwW+zZmY5FdEGh/sHxRYWPbEnWU4IZE17nZA00yPr/edts3Ss8PvgGXeIEZNl/yQ==
+1 &lt; citiuuid: 19bfcf25-d9fd-4c74-9f92-532f4610ad78
+1 &lt; eventid: 24FCE4D8FA4E6E1212E7196060852307
+1 &lt; responseTimeStamp: 2020-08-08T13:27:10:70
+{&quot;modulus&quot;:&quot;9e698de123c3484b174dcaadbc4cb46bc31341a2b743a1a25a1a34e44c9b655f31bfded01b9e14a9b548511d1bfdb9d93b2bbd8fe029fea49376e2f652f3dacc3cc1cf1a15d96726b3e573313803c5be73d154f30820d1e79e17e2d73b4e4fe0b0af406dcddfdb9e0a8d60ca266586bc4d64bd6d08cb37cba72de8240e72d4ed1ef46c76b1df9edd200563ec0614b820f2c6cf847283f74a3105e357a271742b1191314f5ce344f5b39db8caad53d0e6313ee3269aa54e1d3226c072f845e43d950044d77ea3879d65f2b112f7d889ebf793df4d7f247458b623d504c904a6e447fd3283db162d0c84a30b1b1c83d7a43a5ddf9e40165c306bce993bf37e22e3&quot;,&quot;exponent&quot;:&quot;10001&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; And</span>
+  <span class="name">match responseType == 'json'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-62">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-62" class="collapse collapsable-details">
+        <pre>18:57:10.293 [print] {
+  &quot;modulus&quot;: &quot;9e698de123c3484b174dcaadbc4cb46bc31341a2b743a1a25a1a34e44c9b655f31bfded01b9e14a9b548511d1bfdb9d93b2bbd8fe029fea49376e2f652f3dacc3cc1cf1a15d96726b3e573313803c5be73d154f30820d1e79e17e2d73b4e4fe0b0af406dcddfdb9e0a8d60ca266586bc4d64bd6d08cb37cba72de8240e72d4ed1ef46c76b1df9edd200563ec0614b820f2c6cf847283f74a3105e357a271742b1191314f5ce344f5b39db8caad53d0e6313ee3269aa54e1d3226c072f845e43d950044d77ea3879d65f2b112f7d889ebf793df4d7f247458b623d504c904a6e447fd3283db162d0c84a30b1b1c83d7a43a5ddf9e40165c306bce993bf37e22e3&quot;,
+  &quot;exponent&quot;: &quot;10001&quot;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">match response.modulus == '#present'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">match response.exponent == '#string'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">def biz_Token = responseHeaders['bizToken'][0]</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">print biz_Token</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>18:57:10.294 [print] ZHqEc3WpXYdrEXbOKbmjayXwW+zZmY5FdEGh/sHxRYWPbEnWU4IZE17nZA00yPr/edts3Ss8PvgGXeIEZNl/yQ==</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt;&gt; *</span>
+  <span class="name">print '********* Modulus Exponent And bizToken Generated *********'</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-64">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-64" class="collapse collapsable-details">
+        <pre>18:57:10.294 [print] ********* Modulus Exponent And bizToken Generated *********</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print testData.baseURI + testData.ResourceOwner_Resource</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-65">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-65" class="collapse collapsable-details">
+        <pre>18:57:10.303 [print] https://sandbox.apihub.citi.com/gcb/api/password/oauth2/token/bh/gcb</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; Given</span>
+  <span class="name">url testData.baseURI + testData.ResourceOwner_Resource</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header Authorization = testData.base64</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header Accept = testData.accept</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header uuid = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header BizToken = biz_Token</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">header Content-Type = testData.Content_Type</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">form field grant_type = testData.ResourceOwner_Grant_Type</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">form field scope = testData.Scope</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">form field username = testData.Username</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">form field password = testData.encryptedStringPass</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">1.182</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-66">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-66" class="collapse collapsable-details">
+        <pre>18:57:10.313 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/password/oauth2/token/bh/gcb
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic M2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1OkEzbkMxZVU3ZVY2aE44dFIwbkwzakkxY1MxZU41bVQzbEU2aFU3d1A0bVU4dUI0aFM2
+1 &gt; BizToken: ZHqEc3WpXYdrEXbOKbmjayXwW+zZmY5FdEGh/sHxRYWPbEnWU4IZE17nZA00yPr/edts3Ss8PvgGXeIEZNl/yQ==
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 576
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+1 &gt; uuid: 77-9-61613-15-5-5329
+grant_type=password&amp;scope=%2Fapi&amp;username=SandboxUser1&amp;password=967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600
+
+18:57:11.496 response time in milliseconds: 1179.57
+1 &lt; 200
+1 &lt; Access-Control-Allow-Methods: POST
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Expose-Headers: APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 666
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 08 Aug 2020 13:27:11 GMT
+1 &lt; Server: Apache-Coyote/1.1
+1 &lt; Set-Cookie: [CITI_SITE=gtdc, CITI_SITE=gtdc; expires=Sat, 08-Aug-2020 13:47:11 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly]
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f2ea82efc984041
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,58;
+1 &lt; citiuuid: 740f97cd-3db5-40fc-881e-8fb68f11d737
+1 &lt; sid: 65676e15-e721-434d-b7b6-95665c19054d
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1sKPZAFQn6S6ZEMbsWtakJNTsRbSzFbq8mkHriPZ3n5LS9HsIcjv9pG6gQNOnc9DQHVDk1Yw9qk8_YBbHGW0kfBb6bhQ0ijSHhU1aMNuZ7qoWhRtOkpe7NNpmDmhRYKjmPHNQKNTiG-R38794I2sUN9ix1-acqRtL8LJ7OZKkSnnYO1BHnzjDH2J_tH4A1B0sNHPw0tn_XTOSiADAsUkkng&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1596893231, &quot;scope&quot;:&quot;/api&quot;, &quot;refresh_token&quot;:&quot;AAJ4p5MUctAdViZGhsToy29oTLoISasKzxORJYg_xwxSc-vZTYOSEYcmorVdBuqsUrENgJVD8PfAycdcCcWNq3ZDOd8uum1uoiuIirYIEqPWmYFl_5_Td-InFPXFbx4P2kou8k_NP2aXZEzF3wyb-kBn7bgzF8EXNSUYn1Ly0T3DKc5yXOD-f5XRT89b_H-yKbdMtOMPU71Lq7QdUzl-CwmkJRlI8ngu9BvVkYIYrjQ2AQ&quot;, &quot;refresh_token_expires_in&quot;:2592000 }</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print 'Response Time : ' + responseTime</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-67">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-67" class="collapse collapsable-details">
+        <pre>18:57:11.500 [print] Response Time : 1180</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">assert responseTime &lt; 10000</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match responseType == 'json'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-68">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-68" class="collapse collapsable-details">
+        <pre>18:57:11.504 [print] {
+  &quot;access_token&quot;: &quot;AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1sKPZAFQn6S6ZEMbsWtakJNTsRbSzFbq8mkHriPZ3n5LS9HsIcjv9pG6gQNOnc9DQHVDk1Yw9qk8_YBbHGW0kfBb6bhQ0ijSHhU1aMNuZ7qoWhRtOkpe7NNpmDmhRYKjmPHNQKNTiG-R38794I2sUN9ix1-acqRtL8LJ7OZKkSnnYO1BHnzjDH2J_tH4A1B0sNHPw0tn_XTOSiADAsUkkng&quot;,
+  &quot;refresh_token_expires_in&quot;: 2592000,
+  &quot;refresh_token&quot;: &quot;AAJ4p5MUctAdViZGhsToy29oTLoISasKzxORJYg_xwxSc-vZTYOSEYcmorVdBuqsUrENgJVD8PfAycdcCcWNq3ZDOd8uum1uoiuIirYIEqPWmYFl_5_Td-InFPXFbx4P2kou8k_NP2aXZEzF3wyb-kBn7bgzF8EXNSUYn1Ly0T3DKc5yXOD-f5XRT89b_H-yKbdMtOMPU71Lq7QdUzl-CwmkJRlI8ngu9BvVkYIYrjQ2AQ&quot;,
+  &quot;scope&quot;: &quot;/api&quot;,
+  &quot;consented_on&quot;: 1596893231,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: 1800
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">match response.token_type == '#present'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">match response.access_token == '#string'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def Re_tokenType = response.token_type</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def Re_accessToken = response.access_token</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print Re_tokenType</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-69">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-69" class="collapse collapsable-details">
+        <pre>18:57:11.506 [print] Bearer</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print Re_accessToken</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-70">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-70" class="collapse collapsable-details">
+        <pre>18:57:11.506 [print] AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1sKPZAFQn6S6ZEMbsWtakJNTsRbSzFbq8mkHriPZ3n5LS9HsIcjv9pG6gQNOnc9DQHVDk1Yw9qk8_YBbHGW0kfBb6bhQ0ijSHhU1aMNuZ7qoWhRtOkpe7NNpmDmhRYKjmPHNQKNTiG-R38794I2sUN9ix1-acqRtL8LJ7OZKkSnnYO1BHnzjDH2J_tH4A1B0sNHPw0tn_XTOSiADAsUkkng</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def authorization = Re_tokenType+' '+Re_accessToken</span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print authorization</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-71">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-71" class="collapse collapsable-details">
+        <pre>18:57:11.510 [print] Bearer AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1sKPZAFQn6S6ZEMbsWtakJNTsRbSzFbq8mkHriPZ3n5LS9HsIcjv9pG6gQNOnc9DQHVDk1Yw9qk8_YBbHGW0kfBb6bhQ0ijSHhU1aMNuZ7qoWhRtOkpe7NNpmDmhRYKjmPHNQKNTiG-R38794I2sUN9ix1-acqRtL8LJ7OZKkSnnYO1BHnzjDH2J_tH4A1B0sNHPw0tn_XTOSiADAsUkkng</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">print '********* Resource Owner AccessToken Generated *********'</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-72">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-72" class="collapse collapsable-details">
+        <pre>18:57:11.513 [print] ********* Resource Owner AccessToken Generated *********</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url testData.baseURI + testData.Account_Resource</span>
+  
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Authorization = authorization</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header Accept = testData.accept</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header uuid = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header client_id = testData.client_Id</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">1.135</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-73">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-73" class="collapse collapsable-details">
+        <pre>18:57:11.529 request:
+1 &gt; GET https://sandbox.apihub.citi.com/gcb/api/v1/accounts
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1sKPZAFQn6S6ZEMbsWtakJNTsRbSzFbq8mkHriPZ3n5LS9HsIcjv9pG6gQNOnc9DQHVDk1Yw9qk8_YBbHGW0kfBb6bhQ0ijSHhU1aMNuZ7qoWhRtOkpe7NNpmDmhRYKjmPHNQKNTiG-R38794I2sUN9ix1-acqRtL8LJ7OZKkSnnYO1BHnzjDH2J_tH4A1B0sNHPw0tn_XTOSiADAsUkkng
+1 &gt; Connection: Keep-Alive
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+1 &gt; client_id: 3d343d89-f4f0-4d49-9dc5-ca52b1e07135
+1 &gt; uuid: 6615-0781353624741--
+
+18:57:12.661 response time in milliseconds: 1129.03
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Expose-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 08 Aug 2020 13:27:12 GMT
+1 &lt; Set-Cookie: [CITI_SITE=gtdc, CITI_SITE=gtdc; expires=Sat, 08-Aug-2020 13:47:12 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly]
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f2ea82f7113728f
+1 &lt; apitimestamp_1: 2020-08-08T21:27:12.366+08:00
+1 &lt; apitimestamp_2: 2020-08-08T21:27:12.381+08:00
+1 &lt; apitimestamp_4: 2020-08-08T21:27:12.383+08:00
+1 &lt; citiuuid: 526789b5-60ae-4a35-be11-600dbdaf8c17
+1 &lt; mfaCode: FbqWrSUcwZ%2F9zJH1gKpr5DfVXllI9TXQGFH3KQeZzB00jUfn9Z%2BXwOHZ5YntCnes4J3UwWi9qsgJdeV3D8M0W56iDcZxOnqCAIvfUpOKYjO%2FtpCUePweJlfDMoVMyL6WP2V2z4eMp%2FTYuQqjcNZBvzLF8Nr%2FoSwiDpKNjROfQztX7lPbuPCg57q88N91Tci5qTP%2FvjF9IrGm%2FTRhirGHf9w0cg4lKV3%2FVUldvD6TjdwjA2%2Fgafqex%2FfpUyOTOobBxrDc%2FEgXXP99tEOqmU5%2FcXqb5qyr3%2BIjm%2F3ojGzvGK7ksrp3qdIE4TvOLDxyynhLhzvqWBAZlls0xfciIxRPS1xbR9ASRfCWQMtCfmo%2Bn1XiV%2FbkBSVUMWClN1Pb8evTPnorLk%2FuerPPEN1OCdBUV3SBBKkgdK2uetU2SznyMhQ%3D
+1 &lt; uuid: 6615-0781353624741--
+{&quot;accountGroupSummary&quot;:[{&quot;accountGroup&quot;:&quot;SAVINGS_AND_INVESTMENTS&quot;,&quot;accounts&quot;:[{&quot;savingsAccountSummary&quot;:{&quot;productName&quot;:&quot;KONTO OSZCZEDNOSCIOWE BHD&quot;,&quot;productCode&quot;:&quot;0007_SSC20&quot;,&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;accountId&quot;:&quot;63345745333946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533513d&quot;,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;accountClassification&quot;:&quot;ASSET&quot;,&quot;accountStatus&quot;:&quot;ACTIVE&quot;,&quot;currentBalance&quot;:2582.18,&quot;availableBalance&quot;:2582.18}},{&quot;savingsAccountSummary&quot;:{&quot;productName&quot;:&quot;KONTO OSZCZEDNOSCIOWE BHD&quot;,&quot;productCode&quot;:&quot;0007_SSC20&quot;,&quot;displayAccountNumber&quot;:&quot;XXXXXX7557&quot;,&quot;accountId&quot;:&quot;809433290433946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533664d&quot;,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;accountClassification&quot;:&quot;ASSET&quot;,&quot;accountStatus&quot;:&quot;ACTIVE&quot;,&quot;currentBalance&quot;:4582.18,&quot;availableBalance&quot;:4582.18}}]},{&quot;accountGroup&quot;:&quot;CHECKING&quot;,&quot;accounts&quot;:[{&quot;checkingAccountSummary&quot;:{&quot;productName&quot;:&quot;SUB. WALUTOWE CITIGOLD USD&quot;,&quot;productCode&quot;:&quot;0001_SAG00&quot;,&quot;displayAccountNumber&quot;:&quot;XXXXXX3260&quot;,&quot;accountId&quot;:&quot;4556622f58466e6e4d67717537337969422b746c66646a6865484d7470736d683436393178494c2b3563566d&quot;,&quot;currencyCode&quot;:&quot;USD&quot;,&quot;accountClassification&quot;:&quot;ASSET&quot;,&quot;accountStatus&quot;:&quot;ACTIVE&quot;,&quot;currentBalance&quot;:91352.21,&quot;availableBalance&quot;:91352.21}}]},{&quot;accountGroup&quot;:&quot;CREDIT_CARD&quot;,&quot;accounts&quot;:[{&quot;creditCardAccountSummary&quot;:{&quot;productName&quot;:&quot;CITIBANK VISA PLATINUM&quot;,&quot;productCode&quot;:&quot;0004_VC400&quot;,&quot;displayAccountNumber&quot;:&quot;XXXXXXXXXXXX2875&quot;,&quot;accountId&quot;:&quot;743552522b34655255764b546638573230424439313956744f4a69414b71584e6a764a654e5272762b44633d&quot;,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;accountClassification&quot;:&quot;LIABILITY&quot;,&quot;accountStatus&quot;:&quot;ACTIVE&quot;,&quot;outstandingBalance&quot;:950,&quot;availableCredit&quot;:950,&quot;creditLimit&quot;:5400,&quot;minimumDueAmount&quot;:500,&quot;paymentDueDate&quot;:&quot;2016-09-25&quot;,&quot;alternateCurrency&quot;:&quot;GBP&quot;,&quot;alternateCurrencyCurrentBalance&quot;:0,&quot;cardHolderType&quot;:&quot;PRIMARY&quot;}},{&quot;creditCardAccountSummary&quot;:{&quot;productName&quot;:&quot;CITIBANK VISA PLATINUM&quot;,&quot;productCode&quot;:&quot;0004_VC400&quot;,&quot;displayAccountNumber&quot;:&quot;XXXXXX5753&quot;,&quot;accountId&quot;:&quot;75334a554163504f696b485862753135706a3571764332357441476832723073705a647469497372776f544d&quot;,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;accountClassification&quot;:&quot;LIABILITY&quot;,&quot;accountStatus&quot;:&quot;ACTIVE&quot;,&quot;outstandingBalance&quot;:3045.87,&quot;availableCredit&quot;:3045.87,&quot;creditLimit&quot;:10300,&quot;minimumDueAmount&quot;:150,&quot;paymentDueDate&quot;:&quot;2017-07-07&quot;,&quot;alternateCurrency&quot;:&quot;GBP&quot;,&quot;alternateCurrencyCurrentBalance&quot;:0,&quot;cardHolderType&quot;:&quot;SUPPLEMENTARY&quot;}}]}]}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match responseType == 'json'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-74">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-74" class="collapse collapsable-details">
+        <pre>18:57:12.663 [print] {
+  &quot;accountGroupSummary&quot;: [
+    {
+      &quot;accountGroup&quot;: &quot;SAVINGS_AND_INVESTMENTS&quot;,
+      &quot;accounts&quot;: [
+        {
+          &quot;savingsAccountSummary&quot;: {
+            &quot;accountStatus&quot;: &quot;ACTIVE&quot;,
+            &quot;accountId&quot;: &quot;63345745333946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533513d&quot;,
+            &quot;productCode&quot;: &quot;0007_SSC20&quot;,
+            &quot;currentBalance&quot;: 2582.18,
+            &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+            &quot;currencyCode&quot;: &quot;BHD&quot;,
+            &quot;productName&quot;: &quot;KONTO OSZCZEDNOSCIOWE BHD&quot;,
+            &quot;accountClassification&quot;: &quot;ASSET&quot;,
+            &quot;availableBalance&quot;: 2582.18
+          }
+        },
+        {
+          &quot;savingsAccountSummary&quot;: {
+            &quot;accountStatus&quot;: &quot;ACTIVE&quot;,
+            &quot;accountId&quot;: &quot;809433290433946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533664d&quot;,
+            &quot;productCode&quot;: &quot;0007_SSC20&quot;,
+            &quot;currentBalance&quot;: 4582.18,
+            &quot;displayAccountNumber&quot;: &quot;XXXXXX7557&quot;,
+            &quot;currencyCode&quot;: &quot;BHD&quot;,
+            &quot;productName&quot;: &quot;KONTO OSZCZEDNOSCIOWE BHD&quot;,
+            &quot;accountClassification&quot;: &quot;ASSET&quot;,
+            &quot;availableBalance&quot;: 4582.18
+          }
+        }
+      ]
+    },
+    {
+      &quot;accountGroup&quot;: &quot;CHECKING&quot;,
+      &quot;accounts&quot;: [
+        {
+          &quot;checkingAccountSummary&quot;: {
+            &quot;accountStatus&quot;: &quot;ACTIVE&quot;,
+            &quot;accountId&quot;: &quot;4556622f58466e6e4d67717537337969422b746c66646a6865484d7470736d683436393178494c2b3563566d&quot;,
+            &quot;productCode&quot;: &quot;0001_SAG00&quot;,
+            &quot;currentBalance&quot;: 91352.21,
+            &quot;displayAccountNumber&quot;: &quot;XXXXXX3260&quot;,
+            &quot;currencyCode&quot;: &quot;USD&quot;,
+            &quot;productName&quot;: &quot;SUB. WALUTOWE CITIGOLD USD&quot;,
+            &quot;accountClassification&quot;: &quot;ASSET&quot;,
+            &quot;availableBalance&quot;: 91352.21
+          }
+        }
+      ]
+    },
+    {
+      &quot;accountGroup&quot;: &quot;CREDIT_CARD&quot;,
+      &quot;accounts&quot;: [
+        {
+          &quot;creditCardAccountSummary&quot;: {
+            &quot;minimumDueAmount&quot;: 500,
+            &quot;availableCredit&quot;: 950,
+            &quot;productName&quot;: &quot;CITIBANK VISA PLATINUM&quot;,
+            &quot;accountClassification&quot;: &quot;LIABILITY&quot;,
+            &quot;accountStatus&quot;: &quot;ACTIVE&quot;,
+            &quot;accountId&quot;: &quot;743552522b34655255764b546638573230424439313956744f4a69414b71584e6a764a654e5272762b44633d&quot;,
+            &quot;paymentDueDate&quot;: &quot;2016-09-25&quot;,
+            &quot;productCode&quot;: &quot;0004_VC400&quot;,
+            &quot;cardHolderType&quot;: &quot;PRIMARY&quot;,
+            &quot;creditLimit&quot;: 5400,
+            &quot;displayAccountNumber&quot;: &quot;XXXXXXXXXXXX2875&quot;,
+            &quot;alternateCurrencyCurrentBalance&quot;: 0,
+            &quot;currencyCode&quot;: &quot;BHD&quot;,
+            &quot;alternateCurrency&quot;: &quot;GBP&quot;,
+            &quot;outstandingBalance&quot;: 950
+          }
+        },
+        {
+          &quot;creditCardAccountSummary&quot;: {
+            &quot;minimumDueAmount&quot;: 150,
+            &quot;availableCredit&quot;: 3045.87,
+            &quot;productName&quot;: &quot;CITIBANK VISA PLATINUM&quot;,
+            &quot;accountClassification&quot;: &quot;LIABILITY&quot;,
+            &quot;accountStatus&quot;: &quot;ACTIVE&quot;,
+            &quot;accountId&quot;: &quot;75334a554163504f696b485862753135706a3571764332357441476832723073705a647469497372776f544d&quot;,
+            &quot;paymentDueDate&quot;: &quot;2017-07-07&quot;,
+            &quot;productCode&quot;: &quot;0004_VC400&quot;,
+            &quot;cardHolderType&quot;: &quot;SUPPLEMENTARY&quot;,
+            &quot;creditLimit&quot;: 10300,
+            &quot;displayAccountNumber&quot;: &quot;XXXXXX5753&quot;,
+            &quot;alternateCurrencyCurrentBalance&quot;: 0,
+            &quot;currencyCode&quot;: &quot;BHD&quot;,
+            &quot;alternateCurrency&quot;: &quot;GBP&quot;,
+            &quot;outstandingBalance&quot;: 3045.87
+          }
+        }
+      ]
+    }
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">match response.accountGroupSummary == '#present'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">match response.accountGroupSummary[0].accountGroup == 'SAVINGS_AND_INVESTMENTS'</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">match response.accountGroupSummary[1].accountGroup == 'CHECKING'</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">match response.accountGroupSummary[2].accountGroup == 'CREDIT_CARD'</span>
+  
+  <span class="lead-duration duration">0.019</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def account_Id = response.accountGroupSummary[0].accounts[0].savingsAccountSummary.accountId</span>
+  
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print 'Account Id : ' + account_Id</span>
+  
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-75">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-75" class="collapse collapsable-details">
+        <pre>18:57:12.705 [print] Account Id : 63345745333946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533513d</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print '********* Account Summary Details Generated *********'</span>
+  
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-76">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-76" class="collapse collapsable-details">
+        <pre>18:57:12.710 [print] ********* Account Summary Details Generated *********</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url testData.baseURI + testData.TransactionResource+account_Id+testData.TransactionResource1+testData.transaction_Status</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = authorization</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header Accept = testData.accept</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header uuid = randomString(20)</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header client_id = testData.client_Id</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+  
+  <span class="lead-duration duration">0.813</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-77">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-77" class="collapse collapsable-details">
+        <pre>18:57:12.718 request:
+1 &gt; GET https://sandbox.apihub.citi.com/gcb/api//v1/accounts/63345745333946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533513d/transactions?transactionStatus=POSTED
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer AAIkM2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1sKPZAFQn6S6ZEMbsWtakJNTsRbSzFbq8mkHriPZ3n5LS9HsIcjv9pG6gQNOnc9DQHVDk1Yw9qk8_YBbHGW0kfBb6bhQ0ijSHhU1aMNuZ7qoWhRtOkpe7NNpmDmhRYKjmPHNQKNTiG-R38794I2sUN9ix1-acqRtL8LJ7OZKkSnnYO1BHnzjDH2J_tH4A1B0sNHPw0tn_XTOSiADAsUkkng
+1 &gt; Connection: Keep-Alive
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+1 &gt; client_id: 3d343d89-f4f0-4d49-9dc5-ca52b1e07135
+1 &gt; uuid: 91422646539879010665
+
+18:57:13.505 response time in milliseconds: 795.98
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Expose-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 08 Aug 2020 13:27:13 GMT
+1 &lt; Set-Cookie: [CITI_SITE=gtdc, CITI_SITE=gtdc; expires=Sat, 08-Aug-2020 13:47:13 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly]
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f2ea831fc985251
+1 &lt; apitimestamp_1: 2020-08-08T21:27:13.259+08:00
+1 &lt; apitimestamp_2: 2020-08-08T21:27:13.295+08:00
+1 &lt; apitimestamp_4: 2020-08-08T21:27:13.295+08:00
+1 &lt; citiuuid: e0c41931-e744-476c-bd3a-1f2ce97ef49f
+1 &lt; mfaCode: WCym8m6Xnt8zDviUH2S%2FUMVqn0s7FUa1pwIfNnHxzYFOeiiYuRd3MeDtbt2BGw9uFx6maHRUbSylYbxFUzGLm1wFRMsnz3mE3Rio2M9PwVKJrwHKJWeRAx98JUyPXkVhQj3VH7jvUfW3W6ew1IgsYp3Q6oRItFI7ZMfc8xwSaXEk5Yegw1Kvm0L2B0hQUVPQBeWxdCw%2FaylaWwUKL23n%2FSTZfCVxTABC9qryR9vo8ZllgeqD6nDIll9hrFM8YdSPSr2kv3xLVfBlYS2dQDgtlPmlpmCd49gWG5IsfTLu9wPcaCsnHR5KvXghhwkc5cIwJGrRbdprF3v%2BhEQHGR%2Fj15sd71jNU4%2BsO3xrGghxuOyxk1taQwULoZ5hi1z1ncf1ZvgLSBnZgd%2Bb2%2F6RX8rtkXrgEEjwS0qNd7o76PpLtzU%3D
+1 &lt; uuid: 91422646539879010665
+{&quot;transactions&quot;:[{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2021-01-12&quot;,&quot;transactionDescription&quot;:&quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T5567234470GHGGHH&quot;,&quot;transactionReferenceId&quot;:&quot;BKOFT210312X009131&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:92.26,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;foreignTransactionAmount&quot;:244.73,&quot;foreignCurrencyCode&quot;:&quot;USD&quot;,&quot;foreignExchangeRate&quot;:2.65,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:1600.99,&quot;transactionPostingDate&quot;:&quot;2021-01-12&quot;,&quot;transactionCode&quot;:&quot;5400&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2021-01-09&quot;,&quot;transactionDescription&quot;:&quot;MOBILE TOP UP TRANSFERPD Mobile Topup790965100|Play|milan@gmail.com|&quot;,&quot;transactionReferenceId&quot;:&quot;HBKFT200323X057734&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:23,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:19265.5,&quot;transactionPostingDate&quot;:&quot;2021-01-09&quot;,&quot;transactionCode&quot;:&quot;5465&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2021-01-06&quot;,&quot;transactionDescription&quot;:&quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T6654629539SDFASDFSD&quot;,&quot;transactionReferenceId&quot;:&quot;BKOFT210312X009132&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:92.26,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:1600.99,&quot;transactionPostingDate&quot;:&quot;2021-01-06&quot;,&quot;transactionCode&quot;:&quot;5400&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2021-01-04&quot;,&quot;transactionDescription&quot;:&quot;OUTGOING SEPA TRANSFER EUSATHIOKOK&quot;,&quot;transactionReferenceId&quot;:&quot;BKOFT210528T000941&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:1087.45,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:1599.8,&quot;transactionPostingDate&quot;:&quot;2021-01-04&quot;,&quot;transactionCode&quot;:&quot;5479&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2020-12-23&quot;,&quot;transactionDescription&quot;:&quot;INTERNATIONAL/FOREIGN CCY TRANSF. FEEPLN RT:0.0000000COM:50&quot;,&quot;transactionReferenceId&quot;:&quot;PWTFG210219O000020&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:50,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:1601.33,&quot;transactionPostingDate&quot;:&quot;2020-12-23&quot;,&quot;transactionCode&quot;:&quot;5409&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2020-11-29&quot;,&quot;transactionDescription&quot;:&quot;UTILITY BILL PAYMENTRWEINVOICE PAYMENT&quot;,&quot;transactionReferenceId&quot;:&quot;BKOIT2106110000673&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:7.772,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:1598.13,&quot;transactionPostingDate&quot;:&quot;2020-11-29&quot;,&quot;transactionCode&quot;:&quot;5802&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2020-07-20&quot;,&quot;transactionDescription&quot;:&quot;EXTERNAL TRANSFER HSBC Centrala2015/20828&quot;,&quot;transactionReferenceId&quot;:&quot;BKOFT210604T000527&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:1700,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;foreignTransactionAmount&quot;:476,&quot;foreignExchangeRate&quot;:0.28,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;PENDING&quot;,&quot;runningBalance&quot;:1998.9,&quot;transactionPostingDate&quot;:&quot;2020-07-20&quot;,&quot;transactionCode&quot;:&quot;8031&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2020-01-26&quot;,&quot;transactionDescription&quot;:&quot;MISCELLANEOUS CREDITPLN 1139.12 RT: 4.8473670&quot;,&quot;transactionReferenceId&quot;:&quot;PWSFT191230M015839&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:1139.12,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;foreignTransactionAmount&quot;:5521.73,&quot;foreignExchangeRate&quot;:4.847366,&quot;transactionType&quot;:&quot;CREDIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:24206.01,&quot;transactionPostingDate&quot;:&quot;2020-01-26&quot;,&quot;transactionCode&quot;:&quot;1000&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot;2020-01-14&quot;,&quot;transactionDescription&quot;:&quot;OUTGOING CGT0050408811NAME BENUSD 22,400.00 RT: 2.9059690GB&quot;,&quot;transactionReferenceId&quot;:&quot;PWTFT2001060038171&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:6509.37,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;DEBIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:8418.23,&quot;transactionPostingDate&quot;:&quot;2020-01-14&quot;,&quot;transactionCode&quot;:&quot;5197&quot;},{&quot;displayAccountNumber&quot;:&quot;XXXXXX7556&quot;,&quot;transactionDate&quot;:&quot; 2019-01-01&quot;,&quot;transactionDescription&quot;:&quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T7567234470GHGGHH&quot;,&quot;transactionReferenceId&quot;:&quot;PWSFT200113X015913&quot;,&quot;transactionDetailViewFlag&quot;:true,&quot;transactionAmount&quot;:106.75,&quot;currencyCode&quot;:&quot;BHD&quot;,&quot;transactionType&quot;:&quot;CREDIT&quot;,&quot;transactionStatus&quot;:&quot;POSTED&quot;,&quot;runningBalance&quot;:1227.73,&quot;transactionPostingDate&quot;:&quot; 2019-01-01&quot;,&quot;transactionCode&quot;:&quot;528&quot;}]}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match responseType == 'json'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-78">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-78" class="collapse collapsable-details">
+        <pre>18:57:13.531 [print] {
+  &quot;transactions&quot;: [
+    {
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionPostingDate&quot;: &quot;2021-01-12&quot;,
+      &quot;foreignExchangeRate&quot;: 2.65,
+      &quot;transactionDescription&quot;: &quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T5567234470GHGGHH&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;foreignTransactionAmount&quot;: 244.73,
+      &quot;transactionCode&quot;: &quot;5400&quot;,
+      &quot;transactionDate&quot;: &quot;2021-01-12&quot;,
+      &quot;transactionReferenceId&quot;: &quot;BKOFT210312X009131&quot;,
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionAmount&quot;: 92.26,
+      &quot;foreignCurrencyCode&quot;: &quot;USD&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1600.99
+    },
+    {
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 23,
+      &quot;transactionPostingDate&quot;: &quot;2021-01-09&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;MOBILE TOP UP TRANSFERPD Mobile Topup790965100|Play|milan@gmail.com|&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;5465&quot;,
+      &quot;transactionDate&quot;: &quot;2021-01-09&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 19265.5,
+      &quot;transactionReferenceId&quot;: &quot;HBKFT200323X057734&quot;
+    },
+    {
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 92.26,
+      &quot;transactionPostingDate&quot;: &quot;2021-01-06&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T6654629539SDFASDFSD&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;5400&quot;,
+      &quot;transactionDate&quot;: &quot;2021-01-06&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1600.99,
+      &quot;transactionReferenceId&quot;: &quot;BKOFT210312X009132&quot;
+    },
+    {
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 1087.45,
+      &quot;transactionPostingDate&quot;: &quot;2021-01-04&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;OUTGOING SEPA TRANSFER EUSATHIOKOK&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;5479&quot;,
+      &quot;transactionDate&quot;: &quot;2021-01-04&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1599.8,
+      &quot;transactionReferenceId&quot;: &quot;BKOFT210528T000941&quot;
+    },
+    {
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 50,
+      &quot;transactionPostingDate&quot;: &quot;2020-12-23&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;INTERNATIONAL/FOREIGN CCY TRANSF. FEEPLN RT:0.0000000COM:50&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;5409&quot;,
+      &quot;transactionDate&quot;: &quot;2020-12-23&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1601.33,
+      &quot;transactionReferenceId&quot;: &quot;PWTFG210219O000020&quot;
+    },
+    {
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 7.772,
+      &quot;transactionPostingDate&quot;: &quot;2020-11-29&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;UTILITY BILL PAYMENTRWEINVOICE PAYMENT&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;5802&quot;,
+      &quot;transactionDate&quot;: &quot;2020-11-29&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1598.13,
+      &quot;transactionReferenceId&quot;: &quot;BKOIT2106110000673&quot;
+    },
+    {
+      &quot;transactionStatus&quot;: &quot;PENDING&quot;,
+      &quot;transactionPostingDate&quot;: &quot;2020-07-20&quot;,
+      &quot;foreignExchangeRate&quot;: 0.28,
+      &quot;transactionDescription&quot;: &quot;EXTERNAL TRANSFER HSBC Centrala2015/20828&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;foreignTransactionAmount&quot;: 476,
+      &quot;transactionCode&quot;: &quot;8031&quot;,
+      &quot;transactionDate&quot;: &quot;2020-07-20&quot;,
+      &quot;transactionReferenceId&quot;: &quot;BKOFT210604T000527&quot;,
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionAmount&quot;: 1700,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1998.9
+    },
+    {
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionPostingDate&quot;: &quot;2020-01-26&quot;,
+      &quot;foreignExchangeRate&quot;: 4.847366,
+      &quot;transactionDescription&quot;: &quot;MISCELLANEOUS CREDITPLN 1139.12 RT: 4.8473670&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;foreignTransactionAmount&quot;: 5521.73,
+      &quot;transactionCode&quot;: &quot;1000&quot;,
+      &quot;transactionDate&quot;: &quot;2020-01-26&quot;,
+      &quot;transactionReferenceId&quot;: &quot;PWSFT191230M015839&quot;,
+      &quot;transactionType&quot;: &quot;CREDIT&quot;,
+      &quot;transactionAmount&quot;: 1139.12,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 24206.01
+    },
+    {
+      &quot;transactionType&quot;: &quot;DEBIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 6509.37,
+      &quot;transactionPostingDate&quot;: &quot;2020-01-14&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;OUTGOING CGT0050408811NAME BENUSD 22,400.00 RT: 2.9059690GB&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;5197&quot;,
+      &quot;transactionDate&quot;: &quot;2020-01-14&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 8418.23,
+      &quot;transactionReferenceId&quot;: &quot;PWTFT2001060038171&quot;
+    },
+    {
+      &quot;transactionType&quot;: &quot;CREDIT&quot;,
+      &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+      &quot;transactionAmount&quot;: 106.75,
+      &quot;transactionPostingDate&quot;: &quot; 2019-01-01&quot;,
+      &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+      &quot;transactionDescription&quot;: &quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T7567234470GHGGHH&quot;,
+      &quot;transactionDetailViewFlag&quot;: true,
+      &quot;transactionCode&quot;: &quot;528&quot;,
+      &quot;transactionDate&quot;: &quot; 2019-01-01&quot;,
+      &quot;currencyCode&quot;: &quot;BHD&quot;,
+      &quot;runningBalance&quot;: 1227.73,
+      &quot;transactionReferenceId&quot;: &quot;PWSFT200113X015913&quot;
+    }
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print response.transactions[0]</span>
+  
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-79">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-79" class="collapse collapsable-details">
+        <pre>18:57:13.536 [print] {
+  &quot;transactionStatus&quot;: &quot;POSTED&quot;,
+  &quot;transactionPostingDate&quot;: &quot;2021-01-12&quot;,
+  &quot;foreignExchangeRate&quot;: 2.65,
+  &quot;transactionDescription&quot;: &quot;INTERNAL TRANSFER - OWN ACCOUNTAXDXZXJ P T5567234470GHGGHH&quot;,
+  &quot;transactionDetailViewFlag&quot;: true,
+  &quot;foreignTransactionAmount&quot;: 244.73,
+  &quot;transactionCode&quot;: &quot;5400&quot;,
+  &quot;transactionDate&quot;: &quot;2021-01-12&quot;,
+  &quot;transactionReferenceId&quot;: &quot;BKOFT210312X009131&quot;,
+  &quot;transactionType&quot;: &quot;DEBIT&quot;,
+  &quot;transactionAmount&quot;: 92.26,
+  &quot;foreignCurrencyCode&quot;: &quot;USD&quot;,
+  &quot;displayAccountNumber&quot;: &quot;XXXXXX7556&quot;,
+  &quot;currencyCode&quot;: &quot;BHD&quot;,
+  &quot;runningBalance&quot;: 1600.99
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print '********* Transactions Details Generated *********'</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+        
+
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-80">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-80" class="collapse collapsable-details">
+        <pre>18:57:13.537 [print] ********* Transactions Details Generated *********</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+
+      </div>
+      </div>
+</div>
+
+
+    
+
+
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<testsuite failures="0" name="src/test/java/com/assignment3/Karate_Sathya/PDT_Confirmation_API.feature" skipped="0" tests="1" time="14.338468">
+  <testcase classname="src.test.java.com.assignment3.Karate_Sathya.PDT_Confirmation_API" name="Initiate the PDT-ConfirmationAPI with valid fields and verify the Expected Result" time="14.338468">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_PreProcess_API.feature@PDT_PreProcess_Positive') . passed
+Given url testData.baseURI + testData.PDT_Confirmation_Resource ........... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT ....................... passed
+* print Control_Flow_Id ................................................... passed
+And request { controlFlowId: '#(Control_Flow_Id)'} ........................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

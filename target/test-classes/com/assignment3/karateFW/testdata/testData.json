@@ -1,0 +1,78 @@
+{ 
+
+"baseURI" : "https://sandbox.apihub.citi.com/",
+"CardAuthResource" : "gcb/api/clientCredentials/oauth2/token/bh/gcb",
+"base64" : "Basic M2QzNDNkODktZjRmMC00ZDQ5LTlkYzUtY2E1MmIxZTA3MTM1OkEzbkMxZVU3ZVY2aE44dFIwbkwzakkxY1MxZU41bVQzbEU2aFU3d1A0bVU4dUI0aFM2",
+"accept" : "application/json",
+"Content_Type" : "application/x-www-form-urlencoded",
+"client_Id" : "3d343d89-f4f0-4d49-9dc5-ca52b1e07135",
+"client_Secret" : "A3nC1eU7eV6hN8tR0nL3jI1cS1eN5mT3lE6hU7wP4mU8uB4hS6",
+
+"TC_001" : "Initiate the authcode API with valid fields and verify the Expected Result",
+"Grant_Type" : "client_credentials",
+"Scope" : "/api",
+
+"TC_002" : "To verify the request with invalid grant_type as loan_authorization",
+"Invalid_Grant_Type" : "loan_authorization",
+
+"TC_003" : "Initiate the Password API with valid fields and verify the Expected Result",
+"e2eKey_Resource" : "gcb/api/security/e2eKey",
+"Content_Type_e2eKey" : "application/json",
+"country_Code" : "PL",
+"business_Code" : "GCB",
+"channel_Id" : "SSA",
+"ResourceOwner_Resource" : "gcb/api/password/oauth2/token/bh/gcb",
+"ResourceOwner_Grant_Type" : "password",
+"Username" : "SandboxUser1",
+"encryptedStringPass" : "967c2812d7c437b1b8f5dcc887ab64eb24637c9855cc5adeae232c5ae68232802579af2dad68e94c09d3cd6ec3f974e060468150c5ad8c01f39830a723229e8507e9a23433ff273cb6084cf12e838e76e30b2cba1e23ff7be9567726e584f5f442865553df94ddda1ea035e17e3109fcfd9ea3a1d5499a184ca7b79964ca5adfeac59b566f52fb4aa0e7b35983c71b838d16d3dff61715bafde60328e9c5c7fe5ae0e5edc8187d0167206b59df38e718deef822a0499d128d1d6a8464d0871bcdc273658d3c73ebda9c3e348b6e16838942d4630d555ff3ca6569d409b674c37e6b2412e086b644844662dd36fa79acb467207855a39e203552b9f1d2b0e1600",
+
+"TC_004" : "To verify the APIs request with invalid client_id",
+"Invalid_client_Id1" : "f2f08c14-8e53-4b13-862c-bdf182d46df91",
+
+"TC_005" : "To verify the APIs request with invalid username",
+"Invalid_Username" : "SandboxUser123",
+
+"TC_007" : "Initiate the Account API with valid fields and verify the Expected Result",
+"Account_Resource" : "gcb/api/v1/accounts",
+
+"TC_008" : "To verify the APIs request with invalid accessToken",
+"Invalid_authorization" : "Bearer1 AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5sNA6W-csxPzfLgipFD4chlo2TSzBFKsBfQ0HiS-S54ZsRRW8cFQEiSIkiZzCYfo_E_C4pzl-j1fOLPYP-hUWVAKQGqwdwUdNbaC3c_KyX26vDOZrP8UA2wAJh6h6j-AOLuUSk0Js_0p-7J4nAa3e4NzSC79eLClyRbXSAAjRpwssoyGZhCczhbsxEMsnFpwHq5bQebV7BU8jMA1zKcyFUw",
+
+"TC_009" : "To verify the APIs request with invalid client_id",
+"Invalid_client_Id" : "f2f08c14-8e53-4b13-862c-bdf182d46df91",
+
+"TC_010" : "Initiate the GET_Card API with valid fields and verify the Expected Result",
+"Card_Resource" : "gcb/api/v1/cards?cardFunction=",
+"CardFunction" : "ALL",
+
+"TC_011" : "To verify the APIs request with invalid cardFunction",
+"Invalid_CardFunction" : "CREDIT_CARD",
+
+"TC_012" : "Initiate the Transactions API with valid fields and verify the Expected Result",
+"TransactionResource" : "gcb/api//v1/accounts/",
+"TransactionResource1" : "/transactions?transactionStatus=",
+"transaction_Status" : "POSTED",
+
+"TC_013" : "To verify the Transaction APIs request with invalid accountId",
+"invalid_accountId" : "745333946686651706662332f634a375573535370634d706a6574315a2b534565795270615a3533513d12356",
+
+"TC_014" : "Initiate the sourceAccounts & destination Eligibility API with valid fields and verify the Expected Result",
+"PDT_Eligibility_Resource" : "gcb/api/v1/moneyMovement/personalDomesticTransfers/destinationAccounts/sourceAccounts",
+
+"TC_015" : "To verify the sourceAccounts & destination Eligibility API with invalid accessToken",
+"invalid_authorization" : "Bearer",
+
+"TC_016" : "Initiate the PDT-PreProcessAPI with valid fields and verify the Expected Result",
+"PDT_Preprocess_Resource" : "gcb/api/v1/moneyMovement/personalDomesticTransfers/preprocess",
+"Content_Type_PDT" : "application/json",
+"transaction_Amount" : "30",
+
+"TC_017" : "To verify the PDT-PreProcess API with invalid sourceAccountId",
+"invalid_source_AccountId" : "1234576664e6467792f4e53784f4645714f6a6f4f6d53443053582b6359305142594a444e63714b7365536c6c877d",
+
+"TC_018" : "Initiate the PDT-ConfirmationAPI with valid fields and verify the Expected Result",
+  "PDT_Confirmation_Resource" : "gcb/api/v1/moneyMovement/personalDomesticTransfers",
+
+"TC_019" : "To verify the PDT-PreProcess API with invalid controlflowid",
+  "invalid_controlflowid" : "123456789dbj899"
+}

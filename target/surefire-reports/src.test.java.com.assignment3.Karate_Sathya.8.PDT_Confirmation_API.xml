@@ -1,0 +1,26 @@
+<testsuite failures="1" name="src/test/java/com/assignment3/Karate_Sathya/8.PDT_Confirmation_API.feature" skipped="0" tests="1" time="2.440996">
+  <testcase classname="src.test.java.com.assignment3.Karate_Sathya.8.PDT_Confirmation_API" name="Initiate the PDT-ConfirmationAPI with valid fields and verify the Expected Result" time="2.440996">
+    <failure message="-unknown-:7 - evaluation (js) failed: &quot;{&quot;controlFlowId&quot;:controlFlowId}&quot;, &lt;eval&gt;:1:3 Expected ; but found controlFlowId&#13;&#10;&quot;{&quot;controlFlowId&quot;:controlFlowId}&quot;&#13;&#10;   ^ in &lt;eval&gt; at line number 1 at column number 3">* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def ControlFlowId = "{"controlFlowId":controlFlowId}" ................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: -unknown-:7 - evaluation (js) failed: "{"controlFlowId":controlFlowId}", &lt;eval&gt;:1:3 Expected ; but found controlFlowId&#13;
+"{"controlFlowId":controlFlowId}"&#13;
+   ^ in &lt;eval&gt; at line number 1 at column number 3&#13;
+	at ✽.* def ControlFlowId = "{"controlFlowId":controlFlowId}" (-unknown-:7)&#13;
+
+* call read('classpath:com/assignment3/Karate_Sathya/PDT-PreProcess.feature@PDT_PreProcess_Positive') . skipped
+Given url testData.baseURI + testData.PDT_Confirmation_Resource ........... skipped
+And header Authorization = authorization .................................. skipped
+And header Accept = testData.accept ....................................... skipped
+And header uuid = randomString(20) ........................................ skipped
+And header client_id = testData.client_Id ................................. skipped
+And header Content-Type = testData.Content_Type_PDT ....................... skipped
+And request ControlFlowId ................................................. skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match responseType == 'json' .......................................... skipped
+* print response .......................................................... skipped</failure>
+  </testcase>
+</testsuite>

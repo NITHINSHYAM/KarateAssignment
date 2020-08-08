@@ -1,0 +1,56 @@
+<testsuite failures="0" name="com/assignment3/Karate_Sathya/Card_API.feature" skipped="0" tests="2" time="13.956399">
+  <testcase classname="com.assignment3.Karate_Sathya.Card_API" name="Initiate the GET_Card API with valid fields and verify the Expected Result" time="7.694703">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.Card_Resource +testData.CardFunction . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.cardDetails == '#present' ................................ passed
+* match response.cardDetails[0].cardId == '#notnull' ...................... passed
+* def card_Id = response.cardDetails[0].cardId ............................ passed
+* print card_Id ........................................................... passed
+* print '********* Cards Details Generated *********' ..................... passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.Karate_Sathya.Card_API" name="To verify the APIs request with invalid cardFunction" time="6.261696">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.Card_Resource +testData.CardFunction . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.cardDetails == '#present' ................................ passed
+* match response.cardDetails[0].cardId == '#notnull' ...................... passed
+* def card_Id = response.cardDetails[0].cardId ............................ passed
+* print card_Id ........................................................... passed
+* print '********* Cards Details Generated *********' ..................... passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.Card_Resource +testData.Invalid_CardFunction . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 400 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'invalid' ........................................ passed
+* match response.code == 'invalidRequest' ................................. passed
+* match response.details == 'Missing or invalid parameters' ............... passed
+* print '********* Cards Invalid card function *********' ................. passed</system-out>
+  </testcase>
+</testsuite>

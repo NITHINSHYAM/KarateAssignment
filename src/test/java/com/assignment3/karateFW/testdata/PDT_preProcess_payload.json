@@ -1,0 +1,9 @@
+{
+  "sourceAccountId" : "pass a account id from sourceAccounts ",
+  "transactionAmount" : "10",
+  "transferCurrencyIndicator" : "SOURCE_ACCOUNT_CURRENCY",
+  "destinationAccountId" : "pass a account id from destination Eligibility",
+  "chargeBearer" : "BENEFICIARY",
+  "fxDealReferenceNumber" : "123456",
+  "remarks" : "1"
+}

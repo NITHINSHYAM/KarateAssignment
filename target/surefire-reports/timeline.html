@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-3"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"PDT_PreProcess_API[1:10]","start":3903,"end":6701,"title":"PDT_PreProcess_API[1:10] 05:30:03.903-05:30:06.701 Initiate the PDT-PreProcessAPI with valid fields and verify the Expected Result"},{"id":2,"group":1,"content":"PDT_PreProcess_API[2:43]","start":6736,"end":7333,"title":"PDT_PreProcess_API[2:43] 05:30:06.736-05:30:07.333 To verify the PDT-PreProcess API with invalid sourceAccountId"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

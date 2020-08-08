@@ -1,0 +1,31 @@
+<testsuite failures="0" name="src/test/java/Citibank/EPP/EPPMonthlyRepayment.feature" skipped="0" tests="1" time="8.731483">
+  <testcase classname="src.test.java.Citibank.EPP.EPPMonthlyRepayment" name="check monthly payment plan schedule" time="8.731483">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/EPP/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/EPP/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/EPP/RefreshAccessToken.feature') .......... passed
+* call read('classpath:Citibank/EPP/RevokeToken.feature') ................. passed
+* call read('classpath:Citibank/EPP/EPP_Plan.feature') .................... passed
+Given url 'https://qa.sandbox.apihub.citi.com/gcb/gp/api/v1/creditCards/'+cardid+'/easyPaymentPlans/repaymentSchedules?tenor=12&amp;loanAmount=100000' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = '1ad0185b-50f2-4f21-8ac3-f342e4706e7e' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.eppAmortizationSchedule[0].installmentNumber == '1' ...... passed
+* match response.eppAmortizationSchedule[1].installmentNumber == '2' ...... passed
+* match response.eppAmortizationSchedule[2].installmentNumber == '3' ...... passed
+* match response.eppAmortizationSchedule[3].installmentNumber == '4' ...... passed
+* match response.eppAmortizationSchedule[4].installmentNumber == '5' ...... passed
+* match response.eppAmortizationSchedule[5].installmentNumber == '6' ...... passed
+* match response.eppAmortizationSchedule[6].installmentNumber == '7' ...... passed
+* match response.eppAmortizationSchedule[7].installmentNumber == '8' ...... passed
+* match response.eppAmortizationSchedule[8].installmentNumber == '9' ...... passed
+* match response.eppAmortizationSchedule[9].installmentNumber == '10' ..... passed
+* match response.eppAmortizationSchedule[10].installmentNumber == '11' .... passed
+* match response.eppAmortizationSchedule[11].installmentNumber == '12' .... passed
+* print '********* Checked Monthly repayment plan *********' .............. passed</system-out>
+  </testcase>
+</testsuite>

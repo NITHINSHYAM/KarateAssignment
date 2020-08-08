@@ -1,0 +1,17 @@
+<testsuite failures="0" name="src/test/java/Citibank/Accounts/rewardlinkageActivation.feature" skipped="0" tests="1" time="7.326801">
+  <testcase classname="src.test.java.Citibank.Accounts.rewardlinkageActivation" name="fetch access token  from  Citi BANK" time="7.326801">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/Accounts/accessToken.feature') ............ passed
+* call read('classpath:Citibank/Accounts/rewardlinkage.feature') .......... passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/'+rewardLinkCode+'/activations' . passed
+And header client_id = 'cf652567-f5be-4d34-a77f-98374ee4b293' ............. passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header Content-Type = 'application/json' .............................. passed
+And header Authorization = accessToken .................................... passed
+And request {linkageConfirmationCode: '987654' } .......................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

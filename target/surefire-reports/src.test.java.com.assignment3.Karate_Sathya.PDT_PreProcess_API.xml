@@ -1,0 +1,122 @@
+<testsuite failures="2" name="src/test/java/com/assignment3/Karate_Sathya/PDT_PreProcess_API.feature" skipped="0" tests="2" time="3.343674">
+  <testcase classname="src.test.java.com.assignment3.Karate_Sathya.PDT_PreProcess_API" name="Initiate the PDT-PreProcessAPI with valid fields and verify the Expected Result" time="2.761824">
+    <failure message="PDT_PreProcess_API.feature:11 - &#10;PDT_Eligibility_API.feature:10 - &#10;Password_API.feature:53 - &#10;Client_Credentials_API.feature:17 - &#10;java.net.UnknownHostException: No such host is known (sandbox.apihub.citi.com)">* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_PreProcess_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_preProcess_payload.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PDT_PreProcess_API.feature:11 - 
+PDT_Eligibility_API.feature:10 - 
+Password_API.feature:53 - 
+Client_Credentials_API.feature:17 - 
+java.net.UnknownHostException: No such host is known (sandbox.apihub.citi.com)&#13;
+	at ✽.* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') (PDT_PreProcess_API.feature:11)&#13;
+
+Given url testData.baseURI + testData.PDT_Preprocess_Resource ............. skipped
+And header Authorization = authorization .................................. skipped
+And header Accept = testData.accept ....................................... skipped
+And header uuid = randomString(20) ........................................ skipped
+And header client_id = testData.client_Id ................................. skipped
+And header Content-Type = testData.Content_Type_PDT ....................... skipped
+* set PDT_PreProcess_Payload.sourceAccountId = source_AccountId ........... skipped
+* set PDT_PreProcess_Payload.transactionAmount = testData.transaction_Amount . skipped
+* set PDT_PreProcess_Payload.destinationAccountId = destination_AccountId . skipped
+* print 'POST_PDT-PreProcess Payload Request : ' + PDT_PreProcess_Payload . skipped
+And request PDT_PreProcess_Payload ........................................ skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match responseType == 'json' .......................................... skipped
+* print response .......................................................... skipped
+* match response.controlFlowId == '#present' .............................. skipped
+* print 'control FlowId Generated : ' + response.controlFlowId ............ skipped
+* match response.debitDetails == '#present' ............................... skipped
+* match response.debitDetails.transactionDebitAmount == '#number' ......... skipped
+* match response.debitDetails.currencyCode == 'BHD' ....................... skipped
+* match response.creditDetails == '#present' .............................. skipped
+* match response.creditDetails.transactionCreditAmount == '#number' ....... skipped
+* match response.creditDetails.currencyCode == 'BHD' ...................... skipped
+* match response.foreignExchangeRate == '#notnull' ........................ skipped
+* match response.transactionFee == '#present' ............................. skipped
+* match response.feeCurrencyCode == 'BHD' ................................. skipped
+* def Control_Flow_Id = response.controlFlowId ............................ skipped
+* print Control_Flow_Id ................................................... skipped
+* print '********* PDT-PreProcess Done *********' ......................... skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.com.assignment3.Karate_Sathya.PDT_PreProcess_API" name="To verify the PDT-PreProcess API with invalid sourceAccountId" time="0.58185">
+    <failure message="PDT_PreProcess_API.feature:44 - &#10;PDT_Eligibility_API.feature:10 - &#10;Password_API.feature:53 - &#10;Client_Credentials_API.feature:17 - &#10;java.net.UnknownHostException: sandbox.apihub.citi.com">* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_PreProcess_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_preProcess_payload.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PDT_PreProcess_API.feature:11 - 
+PDT_Eligibility_API.feature:10 - 
+Password_API.feature:53 - 
+Client_Credentials_API.feature:17 - 
+java.net.UnknownHostException: No such host is known (sandbox.apihub.citi.com)&#13;
+	at ✽.* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') (PDT_PreProcess_API.feature:11)&#13;
+
+Given url testData.baseURI + testData.PDT_Preprocess_Resource ............. skipped
+And header Authorization = authorization .................................. skipped
+And header Accept = testData.accept ....................................... skipped
+And header uuid = randomString(20) ........................................ skipped
+And header client_id = testData.client_Id ................................. skipped
+And header Content-Type = testData.Content_Type_PDT ....................... skipped
+* set PDT_PreProcess_Payload.sourceAccountId = source_AccountId ........... skipped
+* set PDT_PreProcess_Payload.transactionAmount = testData.transaction_Amount . skipped
+* set PDT_PreProcess_Payload.destinationAccountId = destination_AccountId . skipped
+* print 'POST_PDT-PreProcess Payload Request : ' + PDT_PreProcess_Payload . skipped
+And request PDT_PreProcess_Payload ........................................ skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match responseType == 'json' .......................................... skipped
+* print response .......................................................... skipped
+* match response.controlFlowId == '#present' .............................. skipped
+* print 'control FlowId Generated : ' + response.controlFlowId ............ skipped
+* match response.debitDetails == '#present' ............................... skipped
+* match response.debitDetails.transactionDebitAmount == '#number' ......... skipped
+* match response.debitDetails.currencyCode == 'BHD' ....................... skipped
+* match response.creditDetails == '#present' .............................. skipped
+* match response.creditDetails.transactionCreditAmount == '#number' ....... skipped
+* match response.creditDetails.currencyCode == 'BHD' ...................... skipped
+* match response.foreignExchangeRate == '#notnull' ........................ skipped
+* match response.transactionFee == '#present' ............................. skipped
+* match response.feeCurrencyCode == 'BHD' ................................. skipped
+* def Control_Flow_Id = response.controlFlowId ............................ skipped
+* print Control_Flow_Id ................................................... skipped
+* print '********* PDT-PreProcess Done *********' ......................... skipped
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_PreProcess_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_preProcess_payload.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PDT_PreProcess_API.feature:44 - 
+PDT_Eligibility_API.feature:10 - 
+Password_API.feature:53 - 
+Client_Credentials_API.feature:17 - 
+java.net.UnknownHostException: sandbox.apihub.citi.com&#13;
+	at ✽.* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') (PDT_PreProcess_API.feature:44)&#13;
+
+Given url testData.baseURI + testData.PDT_Preprocess_Resource ............. skipped
+And header Authorization = authorization .................................. skipped
+And header Accept = testData.accept ....................................... skipped
+And header uuid = randomString(20) ........................................ skipped
+And header client_id = testData.client_Id ................................. skipped
+And header Content-Type = testData.Content_Type_PDT ....................... skipped
+* set PDT_PreProcess_Payload.sourceAccountId = testData.invalid_source_AccountId . skipped
+* set PDT_PreProcess_Payload.transactionAmount = testData.transaction_Amount . skipped
+* set PDT_PreProcess_Payload.destinationAccountId = destination_AccountId . skipped
+* print 'POST_PDT-PreProcess Payload Request : ' + PDT_PreProcess_Payload . skipped
+And request PDT_PreProcess_Payload ........................................ skipped
+When method post .......................................................... skipped
+Then status 400 ........................................................... skipped
+And match responseType == 'json' .......................................... skipped
+* print response .......................................................... skipped
+* match response.type == 'invalid' ........................................ skipped
+* match response.code == 'invalidRequest' ................................. skipped
+* match response.details == 'Missing or invalid Parameters' ............... skipped
+* print '********* PDT-PreProcess with invalid_source_AccountId  *********' . skipped</failure>
+  </testcase>
+</testsuite>

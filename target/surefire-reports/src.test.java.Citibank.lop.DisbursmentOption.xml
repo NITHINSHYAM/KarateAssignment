@@ -1,0 +1,21 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/DisbursmentOption.feature" skipped="0" tests="1" time="8.463379">
+  <testcase classname="src.test.java.Citibank.lop.DisbursmentOption" name="check disbursment option of customer" time="8.463379">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/lop/Loan_Eligibility.feature') ............ passed
+* call read('classpath:Citibank/lop/Check_EPP_Plan.feature') .............. passed
+* call read('classpath:Citibank/lop/RepaymentSchedule.feature') ........... passed
+* call read('classpath:Citibank/lop/LoanBooking.feature') ................. passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/accounts/'+accountId+'/loans/disbursementOptions' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.disbursementOptions[0].disbursementOption == 'BANK_ACCOUNT' . passed
+* print '********* DisbursmentOption Details checked *********' ........... passed</system-out>
+  </testcase>
+</testsuite>

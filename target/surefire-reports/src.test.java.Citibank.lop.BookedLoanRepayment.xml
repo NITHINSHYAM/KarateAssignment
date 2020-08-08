@@ -1,0 +1,33 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/BookedLoanRepayment.feature" skipped="0" tests="1" time="9.800331">
+  <testcase classname="src.test.java.Citibank.lop.BookedLoanRepayment" name="check customer loan eligibility using access token" time="9.800331">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/lop/Loan_Eligibility.feature') ............ passed
+* call read('classpath:Citibank/lop/Check_EPP_Plan.feature') .............. passed
+* call read('classpath:Citibank/lop/RepaymentSchedule.feature') ........... passed
+* call read('classpath:Citibank/lop/LoanBooking.feature') ................. passed
+* call read('classpath:Citibank/lop/DisbursmentOption.feature') ........... passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/accounts/'+accountId+'/loans/repaymentSchedules?loanAmount=60000&amp;tenor=12' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.amortizationSchedule[0].installmentNumber == '1' ......... passed
+* match response.amortizationSchedule[1].installmentNumber == '2' ......... passed
+* match response.amortizationSchedule[2].installmentNumber == '3' ......... passed
+* match response.amortizationSchedule[3].installmentNumber == '4' ......... passed
+* match response.amortizationSchedule[4].installmentNumber == '5' ......... passed
+* match response.amortizationSchedule[5].installmentNumber == '6' ......... passed
+* match response.amortizationSchedule[6].installmentNumber == '7' ......... passed
+* match response.amortizationSchedule[7].installmentNumber == '8' ......... passed
+* match response.amortizationSchedule[8].installmentNumber == '9' ......... passed
+* match response.amortizationSchedule[9].installmentNumber == '10' ........ passed
+* match response.amortizationSchedule[10].installmentNumber == '11' ....... passed
+* match response.amortizationSchedule[11].installmentNumber == '12' ....... passed
+* print '*********Checked repayment Schedule plan for particular customer using AccountId And Tenor*********' . passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,22 @@
+<testsuite failures="0" name="src/test/java/Citibank/EPP/EPP_Plan.feature" skipped="0" tests="1" time="7.555183">
+  <testcase classname="src.test.java.Citibank.EPP.EPP_Plan" name="check customer loan eligibility using access token" time="7.555183">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/EPP/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/EPP/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/EPP/RefreshAccessToken.feature') .......... passed
+* call read('classpath:Citibank/EPP/RevokeToken.feature') ................. passed
+Given url 'https://qa.sandbox.apihub.citi.com/gcb/gp/api/v1/creditCards/'+cardid+'/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=100000' . passed
+And header Authorization = access_token ................................... passed
+And header client_id = '1ad0185b-50f2-4f21-8ac3-f342e4706e7e' ............. passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.easyPaymentPlan[0].tenor == '3' .......................... passed
+* match response.easyPaymentPlan[1].tenor == '6' .......................... passed
+* match response.easyPaymentPlan[2].tenor == '12' ......................... passed
+* match response.easyPaymentPlan[3].tenor == '24' ......................... passed
+* print '*********Checked Easy payment plan using AccountId*********' ..... passed</system-out>
+  </testcase>
+</testsuite>

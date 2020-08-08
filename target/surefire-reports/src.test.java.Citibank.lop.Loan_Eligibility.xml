@@ -1,0 +1,28 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/Loan_Eligibility.feature" skipped="0" tests="1" time="6.642438">
+  <testcase classname="src.test.java.Citibank.lop.Loan_Eligibility" name="check customer loan eligibility using access token" time="6.642438">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature') . passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/accounts/loans/eligibility' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.loanEligibilityDetails[0].displayAccountNumber == '#string' . passed
+* match response.loanEligibilityDetails[0].accountId == '#present' ........ passed
+* match response.loanEligibilityDetails[0].maximumEligibleLoanAmount == 500000 . passed
+* match response.loanEligibilityDetails[0].minimumEligibleLoanAmount == 50000 . passed
+* def displayAccountNumber = response.loanEligibilityDetails[0].displayAccountNumber . passed
+* def accountId = response.loanEligibilityDetails[0].accountId ............ passed
+* def maximumEligibleLoanAmount = response.loanEligibilityDetails[0].maximumEligibleLoanAmount . passed
+* def minimumEligibleLoanAmount = response.loanEligibilityDetails[0].minimumEligibleLoanAmount . passed
+* print displayAccountNumber .............................................. passed
+* print accountId ......................................................... passed
+* print maximumEligibleLoanAmount ......................................... passed
+* print minimumEligibleLoanAmount ......................................... passed
+* print '*********Checked Loan Eligibility And AccountId Generated*********' . passed</system-out>
+  </testcase>
+</testsuite>

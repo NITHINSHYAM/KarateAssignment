@@ -1,0 +1,95 @@
+<testsuite failures="0" name="com/assignment3/Karate_Sathya/PDT_PreProcess_API.feature" skipped="0" tests="2" time="12.212128">
+  <testcase classname="com.assignment3.Karate_Sathya.PDT_PreProcess_API" name="Initiate the PDT-PreProcessAPI with valid fields and verify the Expected Result" time="5.878241">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_PreProcess_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_preProcess_payload.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') . passed
+Given url testData.baseURI + testData.PDT_Preprocess_Resource ............. passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT ....................... passed
+* set PDT_PreProcess_Payload.sourceAccountId = source_AccountId ........... passed
+* set PDT_PreProcess_Payload.transactionAmount = testData.transaction_Amount . passed
+* set PDT_PreProcess_Payload.destinationAccountId = destination_AccountId . passed
+* print 'POST_PDT-PreProcess Payload Request : ' + PDT_PreProcess_Payload . passed
+And request PDT_PreProcess_Payload ........................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.controlFlowId == '#present' .............................. passed
+* print 'control FlowId Generated : ' + response.controlFlowId ............ passed
+* match response.debitDetails == '#present' ............................... passed
+* match response.debitDetails.transactionDebitAmount == '#number' ......... passed
+* match response.debitDetails.currencyCode == 'BHD' ....................... passed
+* match response.creditDetails == '#present' .............................. passed
+* match response.creditDetails.transactionCreditAmount == '#number' ....... passed
+* match response.creditDetails.currencyCode == 'BHD' ...................... passed
+* match response.foreignExchangeRate == '#notnull' ........................ passed
+* match response.transactionFee == '#present' ............................. passed
+* match response.feeCurrencyCode == 'BHD' ................................. passed
+* def Control_Flow_Id = response.controlFlowId ............................ passed
+* print Control_Flow_Id ................................................... passed
+* print '********* PDT-PreProcess Done *********' ......................... passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.Karate_Sathya.PDT_PreProcess_API" name="To verify the PDT-PreProcess API with invalid sourceAccountId" time="6.333887">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_PreProcess_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_preProcess_payload.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') . passed
+Given url testData.baseURI + testData.PDT_Preprocess_Resource ............. passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT ....................... passed
+* set PDT_PreProcess_Payload.sourceAccountId = source_AccountId ........... passed
+* set PDT_PreProcess_Payload.transactionAmount = testData.transaction_Amount . passed
+* set PDT_PreProcess_Payload.destinationAccountId = destination_AccountId . passed
+* print 'POST_PDT-PreProcess Payload Request : ' + PDT_PreProcess_Payload . passed
+And request PDT_PreProcess_Payload ........................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.controlFlowId == '#present' .............................. passed
+* print 'control FlowId Generated : ' + response.controlFlowId ............ passed
+* match response.debitDetails == '#present' ............................... passed
+* match response.debitDetails.transactionDebitAmount == '#number' ......... passed
+* match response.debitDetails.currencyCode == 'BHD' ....................... passed
+* match response.creditDetails == '#present' .............................. passed
+* match response.creditDetails.transactionCreditAmount == '#number' ....... passed
+* match response.creditDetails.currencyCode == 'BHD' ...................... passed
+* match response.foreignExchangeRate == '#notnull' ........................ passed
+* match response.transactionFee == '#present' ............................. passed
+* match response.feeCurrencyCode == 'BHD' ................................. passed
+* def Control_Flow_Id = response.controlFlowId ............................ passed
+* print Control_Flow_Id ................................................... passed
+* print '********* PDT-PreProcess Done *********' ......................... passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* def PDT_PreProcess_Payload = read('classpath:com/assignment3/karateFW/testData/PDT_preProcess_payload.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/PDT_Eligibility_API.feature@PDT_Eligibility_Positive') . passed
+Given url testData.baseURI + testData.PDT_Preprocess_Resource ............. passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+And header Content-Type = testData.Content_Type_PDT ....................... passed
+* set PDT_PreProcess_Payload.sourceAccountId = testData.invalid_source_AccountId . passed
+* set PDT_PreProcess_Payload.transactionAmount = testData.transaction_Amount . passed
+* set PDT_PreProcess_Payload.destinationAccountId = destination_AccountId . passed
+* print 'POST_PDT-PreProcess Payload Request : ' + PDT_PreProcess_Payload . passed
+And request PDT_PreProcess_Payload ........................................ passed
+When method post .......................................................... passed
+Then status 400 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'invalid' ........................................ passed
+* match response.code == 'invalidRequest' ................................. passed
+* match response.details == 'Missing or invalid Parameters' ............... passed
+* print '********* PDT-PreProcess with invalid_source_AccountId  *********' . passed</system-out>
+  </testcase>
+</testsuite>

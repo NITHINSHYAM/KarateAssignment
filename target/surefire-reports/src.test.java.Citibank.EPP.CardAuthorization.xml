@@ -1,0 +1,21 @@
+<testsuite failures="0" name="src/test/java/Citibank/EPP/CardAuthorization.feature" skipped="0" tests="1" time="2.321693">
+  <testcase classname="src.test.java.Citibank.EPP.CardAuthorization" name="Get control flowId Using Authorization request payload" time="2.321693">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def CardAuthRequest = read('classpath:Citibank/EPP/CardAuthorizationRequest.json') . passed
+* def testData = read('classpath:Citibank/EPP/TestData.json') ............. passed
+Given url 'https://qa.sandbox.apihub.citi.com/gcb/gp/api/cardAuth/oauth2/authorize/SG/gcb' . passed
+And header Authorization = testData.Auth .................................. passed
+And header Content-Type = testData.content_type ........................... passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.clientId .................................. passed
+And request CardAuthRequest ............................................... passed
+When method post .......................................................... passed
+Then status 403 ........................................................... passed
+* print response .......................................................... passed
+* def ControlflowId1 = response.moreInfo.controlFlowId .................... passed
+* match ControlflowId1 == '#present' ...................................... passed
+* print ControlflowId1 .................................................... passed
+* print '*********ControlFlowIdGenerated*********' ........................ passed</system-out>
+  </testcase>
+</testsuite>

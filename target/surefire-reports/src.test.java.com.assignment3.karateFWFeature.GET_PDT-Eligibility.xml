@@ -1,0 +1,21 @@
+<testsuite failures="0" name="src/test/java/com/assignment3/karateFWFeature/GET_PDT-Eligibility.feature" skipped="0" tests="1" time="5.392508">
+  <testcase classname="src.test.java.com.assignment3.karateFWFeature.GET_PDT-Eligibility" name="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result" time="5.392508">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_Password.feature@ResourceOwner') . passed
+Given url testData.baseURI + testData.PDT_Eligibility_Resource ............ passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.sourceAccounts == '#present' ............................. passed
+* match response.destinationSourceAcctCombinations == '#present' .......... passed
+* print '********* Check PDT_Eligibility Details *********' ............... passed</system-out>
+  </testcase>
+</testsuite>

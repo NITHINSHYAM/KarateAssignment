@@ -1,0 +1,12 @@
+{
+
+"Auth" : "Basic MWFkMDE4NWItNTBmMi00ZjIxLThhYzMtZjM0MmU0NzA2ZTdlOmhBM2lIM2FBOGpDNW9BN2tZN2tCMGZWN3FHMHZKNWdON3BOM3dFM2VYOGlCMmpXNW1E",
+"content_type": "application/json",
+"accept" : "application/json",
+"clientId" : "1ad0185b-50f2-4f21-8ac3-f342e4706e7e",
+"content_type_encoded" : "application/x-www-form-urlencoded",
+"grantType" : "card_authorization",
+"linkage_Confirmation_Code" : "987654",
+"Scope" : "epp_booking"
+ 
+}

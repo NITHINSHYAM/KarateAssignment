@@ -1,0 +1,62 @@
+<testsuite failures="0" name="com/assignment3/karateFWFeature/GET_Card.feature" skipped="0" tests="2" time="16.169012">
+  <testcase classname="com.assignment3.karateFWFeature.GET_Card" name="Initiate the GET_Card API with valid fields and verify the Expected Result" time="9.528125">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_Password.feature@ResourceOwner') . passed
+Given url testData.baseURI + testData.Card_Resource +testData.CardFunction . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.cardDetails == '#present' ................................ passed
+* match response.cardDetails[0].cardId == '#notnull' ...................... passed
+* def card_Id = response.cardDetails[0].cardId ............................ passed
+* print card_Id ........................................................... passed
+* print '********* Cards Details Generated *********' ..................... passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.karateFWFeature.GET_Card" name="To verify the APIs request with invalid cardFunction" time="6.640887">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_Password.feature@ResourceOwner') . passed
+Given url testData.baseURI + testData.Card_Resource +testData.CardFunction . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.cardDetails == '#present' ................................ passed
+* match response.cardDetails[0].cardId == '#notnull' ...................... passed
+* def card_Id = response.cardDetails[0].cardId ............................ passed
+* print card_Id ........................................................... passed
+* print '********* Cards Details Generated *********' ..................... passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/POST_Password.feature@ResourceOwner') . passed
+Given url testData.baseURI + testData.Card_Resource +testData.Invalid_CardFunction . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 400 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'invalid' ........................................ passed
+* match response.code == 'invalidRequest' ................................. passed
+* match response.details == 'Missing or invalid parameters' ............... passed
+* print '********* Cards Invalid card function *********' ................. passed</system-out>
+  </testcase>
+</testsuite>

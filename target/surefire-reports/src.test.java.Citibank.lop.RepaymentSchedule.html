@@ -1,0 +1,3247 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.Citibank.lop.RepaymentSchedule</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2020-07-15 03:33:04 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:7]">[1:7] check customer loan eligibility using access token </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/Citibank/lop/RepaymentSchedule.feature</span><span class="feature-description">Check Monthly payment amount plan using AccountId and tenor</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:7]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">RePaymentSchedule</a>
+</div>
+<span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">check customer loan eligibility using access token </span>
+</div>
+<div class="scenario-time passed">ms: 7138</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:7]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* call read('classpath:reusable.feature')</div>
+</div>
+<div class="time-cell passed">484</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="1.1">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">reusable.feature</div>
+</div>
+<div class="time-cell passed">441</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random string will be generated. This is mainly used for the X-REQUEST-ID value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomString =</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="preformatted" data-parent="2">function(s) {
+var text = "";
+var possible = "1234-567-890";
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def requestId = randomString(20)</div>
+</div>
+<div class="time-cell passed">38</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Current Time value is generated and assigned to a variable. This is used for the beneficiary value when creating a beneficiary</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def now =</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="4">function(){ return java.lang.System.currentTimeMillis() }</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def currentTime = now()</div>
+</div>
+<div class="time-cell passed">26</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random UUID value is generated and assigned to a variable. This is used for the deviceId value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomUUID =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="6">function(){ return java.util.UUID.randomUUID() + '' }</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="7">
+<div class="step-ref bg-step">7</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def uuid = randomUUID()</div>
+</div>
+<div class="time-cell passed">278</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#    TBC</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># * def tulipReferenceGen =</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># function(s) {</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var text = "";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var possible = "abcdefghijklmnopqrstuv1234567890";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   for (var i = 0; i &lt; s; i++)</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#     text += possible.charAt(Math.floor(Math.random() * possible.length));</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   return text;</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def getDate =</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="8">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="9">
+<div class="step-ref bg-step">9</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def SimpleDateFormatDate = getDate()</div>
+</div>
+<div class="time-cell passed">37</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="10">
+<div class="step-ref bg-step">10</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def jsessionIDSplit =</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="10">function(list)
+{
+ var session=list.split(" ", 14);
+ return session
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="11">
+<div class="step-ref bg-step">11</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def sleep = function(millis){ java.lang.Thread.sleep(millis) }</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="12">
+<div class="step-ref bg-step">12</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def internatiocnalDateFormat =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="12">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="13">
+<div class="step-ref bg-step">13</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def yesterday =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="13">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="14">
+<div class="step-ref bg-step">14</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def futureDate =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="14">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random future date generation</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="15">
+<div class="step-ref bg-step">15</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomFutureDate =</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="preformatted" data-parent="15">function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</div>
+<div class="step-row" data-parent="[1:7]bg">
+<div class="step-container" id="16">
+<div class="step-ref bg-step">16</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def weekEnd =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="16">function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* call read('classpath:Citibank/lop/CardAuthorization.feature')</div>
+</div>
+<div class="time-cell passed">3003</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-cell passed">Citibank/lop/CardAuthorization.feature</div>
+</div>
+<div class="time-cell passed">2980</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* call read('classpath:reusable.feature')</div>
+</div>
+<div class="time-cell passed">35</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">reusable.feature</div>
+</div>
+<div class="time-cell passed">16</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random string will be generated. This is mainly used for the X-REQUEST-ID value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomString =</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="19">function(s) {
+var text = "";
+var possible = "1234-567-890";
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def requestId = randomString(20)</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Current Time value is generated and assigned to a variable. This is used for the beneficiary value when creating a beneficiary</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def now =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="21">function(){ return java.lang.System.currentTimeMillis() }</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def currentTime = now()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random UUID value is generated and assigned to a variable. This is used for the deviceId value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomUUID =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="23">function(){ return java.util.UUID.randomUUID() + '' }</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def uuid = randomUUID()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#    TBC</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># * def tulipReferenceGen =</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># function(s) {</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var text = "";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var possible = "abcdefghijklmnopqrstuv1234567890";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   for (var i = 0; i &lt; s; i++)</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#     text += possible.charAt(Math.floor(Math.random() * possible.length));</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   return text;</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def getDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="25">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def SimpleDateFormatDate = getDate()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def jsessionIDSplit =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="27">function(list)
+{
+ var session=list.split(" ", 14);
+ return session
+}</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def sleep = function(millis){ java.lang.Thread.sleep(millis) }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def internatiocnalDateFormat =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="29">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def yesterday =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="30">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref passed">31</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def futureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="31">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random future date generation</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="32">
+<div class="step-ref passed">32</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomFutureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="32">function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</div>
+<div class="step-row">
+<div class="step-container" id="33">
+<div class="step-ref passed">33</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def weekEnd =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="33">function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</div>
+<div class="step-row">
+<div class="step-container" id="34">
+<div class="step-ref passed">34</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def CardAuthRequest = read('classpath:Citibank/lop/CardAuthorizationRequest.json')</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="35">
+<div class="step-ref passed">35</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given url 'https://sandbox.apihub.citi.com/gcb/api/cardAuth/oauth2/authorize/sg/gcb'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="36">
+<div class="step-ref passed">36</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Authorization = 'Basic ZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5Olk4eVAzYk43Z1MzbFEwYUMzd0UwcVkzb0M0Z1Uwa0swc0kxdUk1aEY2d0Y2cUw0a0Ez'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="37">
+<div class="step-ref passed">37</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Content-Type = 'application/json'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="38">
+<div class="step-ref passed">38</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="39">
+<div class="step-ref passed">39</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header uuid = randomString(20)</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="40">
+<div class="step-ref passed">40</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="41">
+<div class="step-ref passed">41</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And request CardAuthRequest</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="42">
+<div class="step-ref passed">42</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">2875</div>
+</div>
+<div class="preformatted" data-parent="42">15:32:58.068 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/cardAuth/oauth2/authorize/sg/gcb
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic ZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5Olk4eVAzYk43Z1MzbFEwYUMzd0UwcVkzb0M0Z1Uwa0swc0kxdUk1aEY2d0Y2cUw0a0Ez
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 157
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_211)
+1 &gt; client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &gt; uuid: -2---16-12--96563406
+{"grant_type":"card_authorization","lastFourDigitsCardNumber":"8653","citiCardHolderPhoneNumber":"6590020056","merchantCustomerReferenceId":"CB072000128065"}
+
+15:33:00.253 response time in milliseconds: 2181.58
+1 &lt; 403
+1 &lt; Access-Control-Allow-Headers: ,Content-Type,sid,CCPToken,CFIToken,countryCode,businessCode,channelId,uuid,client_id,environmentId
+1 &lt; Access-Control-Allow-Methods: GET,PUT,POST,DELETE,HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Expose-Headers: APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID,sid,SessionId,CCPToken,CFIToken
+1 &lt; Access-Control-Max-Age: 2147483647
+1 &lt; Cache-Control: no-cache, no-store
+1 &lt; Citiuuid: e45ee943-d202-490e-8672-95af9a5e4c33
+1 &lt; Client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &lt; Connection: close
+1 &lt; Content-Type: application/json
+1 &lt; Date: Wed, 15 Jul 2020 10:03:00 GMT
+1 &lt; Expires: -1
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Wed, 15-Jul-2020 10:23:00 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; Uuid: -2---16-12--96563406
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,pcr,onboard,mutualfund,moneymovementpayee,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:2
+1 &lt; X-Backside-Transport: FAIL FAIL,FAIL FAIL,FAIL FAIL
+1 &lt; X-Global-Transaction-ID: 2b7692085f0ed4537692494f
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,59;
+1 &lt; X-Vcap-Request-Id: 3bfc9d14-fb32-4a03-4c28-bf43c0bc188d
+{"type":"error","code":"mfaRequired","details":"MFA is required","moreInfo":{"mfaType":"otp","controlFlowId":"96491411997742982658368474784511","status":"generated","mfaResponse":{"otpDeliveryOption":["SMS"]}}}</div>
+<div class="step-row">
+<div class="step-container" id="43">
+<div class="step-ref passed">43</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 403</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="44">
+<div class="step-ref passed">44</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="44">15:33:00.256 [print] {
+  "code": "mfaRequired",
+  "details": "MFA is required",
+  "type": "error",
+  "moreInfo": {
+    "controlFlowId": "96491411997742982658368474784511",
+    "mfaType": "otp",
+    "mfaResponse": {
+      "otpDeliveryOption": [
+        "SMS"
+      ]
+    },
+    "status": "generated"
+  }
+}</div>
+<div class="step-row">
+<div class="step-container" id="45">
+<div class="step-ref passed">45</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def ControlflowId1 = response.moreInfo.controlFlowId</div>
+</div>
+<div class="time-cell passed">20</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="46">
+<div class="step-ref passed">46</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match ControlflowId1 == '#present'</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="47">
+<div class="step-ref passed">47</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print ControlflowId1</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="47">15:33:00.289 [print] 96491411997742982658368474784511</div>
+<div class="step-row">
+<div class="step-container" id="48">
+<div class="step-ref passed">48</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print '*********ControlFlowIdGenerated*********'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="48">15:33:00.293 [print] *********ControlFlowIdGenerated*********</div>
+<div class="step-row">
+<div class="step-container" id="49">
+<div class="step-ref passed">49</div>
+<div class="step-cell passed">* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature')</div>
+</div>
+<div class="time-cell passed">1082</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="49.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-cell passed">Citibank/lop/CardAuthorizationAccessToken.feature</div>
+</div>
+<div class="time-cell passed">1057</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="50">
+<div class="step-ref passed">50</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* call read('classpath:reusable.feature')</div>
+</div>
+<div class="time-cell passed">49</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="50.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">reusable.feature</div>
+</div>
+<div class="time-cell passed">26</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random string will be generated. This is mainly used for the X-REQUEST-ID value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="51">
+<div class="step-ref passed">51</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomString =</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="preformatted" data-parent="51">function(s) {
+var text = "";
+var possible = "1234-567-890";
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</div>
+<div class="step-row">
+<div class="step-container" id="52">
+<div class="step-ref passed">52</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def requestId = randomString(20)</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Current Time value is generated and assigned to a variable. This is used for the beneficiary value when creating a beneficiary</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="53">
+<div class="step-ref passed">53</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def now =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="53">function(){ return java.lang.System.currentTimeMillis() }</div>
+<div class="step-row">
+<div class="step-container" id="54">
+<div class="step-ref passed">54</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def currentTime = now()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random UUID value is generated and assigned to a variable. This is used for the deviceId value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="55">
+<div class="step-ref passed">55</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomUUID =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="55">function(){ return java.util.UUID.randomUUID() + '' }</div>
+<div class="step-row">
+<div class="step-container" id="56">
+<div class="step-ref passed">56</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def uuid = randomUUID()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#    TBC</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># * def tulipReferenceGen =</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># function(s) {</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var text = "";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var possible = "abcdefghijklmnopqrstuv1234567890";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   for (var i = 0; i &lt; s; i++)</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#     text += possible.charAt(Math.floor(Math.random() * possible.length));</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   return text;</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="57">
+<div class="step-ref passed">57</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def getDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="57">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="58">
+<div class="step-ref passed">58</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def SimpleDateFormatDate = getDate()</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="59">
+<div class="step-ref passed">59</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def jsessionIDSplit =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="59">function(list)
+{
+ var session=list.split(" ", 14);
+ return session
+}</div>
+<div class="step-row">
+<div class="step-container" id="60">
+<div class="step-ref passed">60</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def sleep = function(millis){ java.lang.Thread.sleep(millis) }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="61">
+<div class="step-ref passed">61</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def internatiocnalDateFormat =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="61">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="62">
+<div class="step-ref passed">62</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def yesterday =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="62">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</div>
+<div class="step-row">
+<div class="step-container" id="63">
+<div class="step-ref passed">63</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def futureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="63">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random future date generation</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="64">
+<div class="step-ref passed">64</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomFutureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="64">function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</div>
+<div class="step-row">
+<div class="step-container" id="65">
+<div class="step-ref passed">65</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def weekEnd =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="65">function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#* call read('classpath:Citibank/lop/CardAuthorization.feature')</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="66">
+<div class="step-ref passed">66</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given url 'https://sandbox.apihub.citi.com/gcb/api/cardAuth/oauth2/token/sg/gcb'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="67">
+<div class="step-ref passed">67</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Authorization = 'Basic ZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5Olk4eVAzYk43Z1MzbFEwYUMzd0UwcVkzb0M0Z1Uwa0swc0kxdUk1aEY2d0Y2cUw0a0Ez'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="68">
+<div class="step-ref passed">68</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Content-Type = 'application/x-www-form-urlencoded'</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="69">
+<div class="step-ref passed">69</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="70">
+<div class="step-ref passed">70</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header uuid = randomString(20)</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="71">
+<div class="step-ref passed">71</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="72">
+<div class="step-ref passed">72</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And form field grant_type = 'card_authorization'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="73">
+<div class="step-ref passed">73</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And form field controlFlowId = ControlflowId1</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="74">
+<div class="step-ref passed">74</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And form field linkageConfirmationCode = '987654'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="75">
+<div class="step-ref passed">75</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And form field scope = 'lop_booking'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="76">
+<div class="step-ref passed">76</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">967</div>
+</div>
+<div class="preformatted" data-parent="76">15:33:00.391 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/cardAuth/oauth2/token/sg/gcb
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic ZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5Olk4eVAzYk43Z1MzbFEwYUMzd0UwcVkzb0M0Z1Uwa0swc0kxdUk1aEY2d0Y2cUw0a0Ez
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 125
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_211)
+1 &gt; client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &gt; uuid: 04-53163374-9--6821-
+grant_type=card_authorization&amp;controlFlowId=96491411997742982658368474784511&amp;linkageConfirmationCode=987654&amp;scope=lop_booking
+
+15:33:01.353 response time in milliseconds: 959.64
+1 &lt; 200
+1 &lt; Accept: application/json
+1 &lt; Access-Control-Allow-Methods: POST
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Expose-Headers: APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Cookie: CITI_SITE=gtdc
+1 &lt; Date: Wed, 15 Jul 2020 10:03:01 GMT
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Wed, 15-Jul-2020 10:23:01 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; X-Akamai-True-Client-IP: 27.5.198.129
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-DataStream-Session-Id: 51745581-5f0ed454-19dea4ba
+1 &lt; X-Forwarded-For: 27.5.198.129, 49.44.131.94
+1 &lt; X-Global-Transaction-ID: 98b6a3705f0ed454bfc3693d
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; cardIdHeader: 44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d
+1 &lt; cardReferenceNumberHeader: 37344b5144564669667
+1 &lt; citiUUID: 
+1 &lt; client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &lt; client_secret: Y8yP3bN7gS3lQ0aC3wE0qY3oC4gU0kK0sI1uI5hF6wF6qL4kA3
+1 &lt; customerIdHeader: 6f4442616a48476f646576436c2f5a307949365a357465536f726866412f77393263316d387132506c416f3d
+1 &lt; dmz-global-txn-id: 98b6a3705f0ed454bfc3693d
+1 &lt; mfaCode: 56VVYOf%2BADPBHLDkxNXXWbfaAyAYu0J7fRFvDvNbQjxZNoulJkLrQbP5EIijD%2FoPSOLmtCf7YkO3XBO2STlOmw%3D%3D
+1 &lt; uuid: 04-53163374-9--6821-
+{"token_type":"Bearer","access_token":"AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5y8nZTt7ojCDyhwiUuaFPAA5pd_K0fA2uqRWAGrQNLAWoYnjATh4rLrRUkYwJHopN7T24WtviKpZtc9d-ddyMRoYTY-WcUVt43r1qZJ9erEpgsJ8nVMUmdQwTh2gmSzyXW1wEfcaEnOd5RM1Na9x8weFqU-KQ_uJ8KLLX7bB3799qwMj0Rgxs5_UAEWYMHWcq_xrm9BDCga3d0B_5AWgwfg","expires_in":2678400,"consented_on":1594807380,"scope":"lop_booking","refresh_token":"AAKbs7uz7-cBW39EI_ePubP0aGfHp3X8xIXPQj9vWHIWGDMwRQMXQrrTTpU3se5aFAYTn_b45JxZ2C7xat-LFFxs8B5GSIIZYdXnstikWRQI-unxDYX-Iwg4Yhv47IyfdyxHTNoJrsgIjdKVRoL7NBnL9-f62xbz3HAIb1fM9GP75IixH8Xjj1s6Qat90cLKO8pqzSFDC1pGyOYp1-d6eNZ79mvqTGKDUdP9pmJpqRNWdw","refresh_token_expires_in":2682000,"cardId":"44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d","customerId":"6f4442616a48476f646576436c2f5a307949365a357465536f726866412f77393263316d387132506c416f3d","cardReferenceNumber":"37344b5144564669667"}</div>
+<div class="step-row">
+<div class="step-container" id="77">
+<div class="step-ref passed">77</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="78">
+<div class="step-ref passed">78</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="78">15:33:01.355 [print] {
+  "access_token": "AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5y8nZTt7ojCDyhwiUuaFPAA5pd_K0fA2uqRWAGrQNLAWoYnjATh4rLrRUkYwJHopN7T24WtviKpZtc9d-ddyMRoYTY-WcUVt43r1qZJ9erEpgsJ8nVMUmdQwTh2gmSzyXW1wEfcaEnOd5RM1Na9x8weFqU-KQ_uJ8KLLX7bB3799qwMj0Rgxs5_UAEWYMHWcq_xrm9BDCga3d0B_5AWgwfg",
+  "refresh_token_expires_in": 2682000,
+  "refresh_token": "AAKbs7uz7-cBW39EI_ePubP0aGfHp3X8xIXPQj9vWHIWGDMwRQMXQrrTTpU3se5aFAYTn_b45JxZ2C7xat-LFFxs8B5GSIIZYdXnstikWRQI-unxDYX-Iwg4Yhv47IyfdyxHTNoJrsgIjdKVRoL7NBnL9-f62xbz3HAIb1fM9GP75IixH8Xjj1s6Qat90cLKO8pqzSFDC1pGyOYp1-d6eNZ79mvqTGKDUdP9pmJpqRNWdw",
+  "scope": "lop_booking",
+  "cardId": "44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d",
+  "consented_on": 1594807380,
+  "customerId": "6f4442616a48476f646576436c2f5a307949365a357465536f726866412f77393263316d387132506c416f3d",
+  "cardReferenceNumber": "37344b5144564669667",
+  "token_type": "Bearer",
+  "expires_in": 2678400
+}</div>
+<div class="step-row">
+<div class="step-container" id="79">
+<div class="step-ref passed">79</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.token_type == '#string'</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="80">
+<div class="step-ref passed">80</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.access_token == '#string'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="81">
+<div class="step-ref passed">81</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def tokenType = response.token_type</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="82">
+<div class="step-ref passed">82</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def accessToken = response.access_token</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="83">
+<div class="step-ref passed">83</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def access_token = tokenType+' '+accessToken</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="84">
+<div class="step-ref passed">84</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print access_token</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="84">15:33:01.373 [print] Bearer AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5y8nZTt7ojCDyhwiUuaFPAA5pd_K0fA2uqRWAGrQNLAWoYnjATh4rLrRUkYwJHopN7T24WtviKpZtc9d-ddyMRoYTY-WcUVt43r1qZJ9erEpgsJ8nVMUmdQwTh2gmSzyXW1wEfcaEnOd5RM1Na9x8weFqU-KQ_uJ8KLLX7bB3799qwMj0Rgxs5_UAEWYMHWcq_xrm9BDCga3d0B_5AWgwfg</div>
+<div class="step-row">
+<div class="step-container" id="85">
+<div class="step-ref passed">85</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print '*********AccessTokenGenerated*********'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="85">15:33:01.376 [print] *********AccessTokenGenerated*********</div>
+<div class="step-row">
+<div class="step-container" id="86">
+<div class="step-ref passed">86</div>
+<div class="step-cell passed">* call read('classpath:Citibank/lop/Loan_Eligibility.feature')</div>
+</div>
+<div class="time-cell passed">819</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="86.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-cell passed">Citibank/lop/Loan_Eligibility.feature</div>
+</div>
+<div class="time-cell passed">796</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="87">
+<div class="step-ref passed">87</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* call read('classpath:reusable.feature')</div>
+</div>
+<div class="time-cell passed">31</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="87.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">reusable.feature</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random string will be generated. This is mainly used for the X-REQUEST-ID value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="88">
+<div class="step-ref passed">88</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomString =</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="88">function(s) {
+var text = "";
+var possible = "1234-567-890";
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</div>
+<div class="step-row">
+<div class="step-container" id="89">
+<div class="step-ref passed">89</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def requestId = randomString(20)</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Current Time value is generated and assigned to a variable. This is used for the beneficiary value when creating a beneficiary</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="90">
+<div class="step-ref passed">90</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def now =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="90">function(){ return java.lang.System.currentTimeMillis() }</div>
+<div class="step-row">
+<div class="step-container" id="91">
+<div class="step-ref passed">91</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def currentTime = now()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random UUID value is generated and assigned to a variable. This is used for the deviceId value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="92">
+<div class="step-ref passed">92</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomUUID =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="92">function(){ return java.util.UUID.randomUUID() + '' }</div>
+<div class="step-row">
+<div class="step-container" id="93">
+<div class="step-ref passed">93</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def uuid = randomUUID()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#    TBC</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># * def tulipReferenceGen =</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># function(s) {</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var text = "";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var possible = "abcdefghijklmnopqrstuv1234567890";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   for (var i = 0; i &lt; s; i++)</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#     text += possible.charAt(Math.floor(Math.random() * possible.length));</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   return text;</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="94">
+<div class="step-ref passed">94</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def getDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="94">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="95">
+<div class="step-ref passed">95</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def SimpleDateFormatDate = getDate()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="96">
+<div class="step-ref passed">96</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def jsessionIDSplit =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="96">function(list)
+{
+ var session=list.split(" ", 14);
+ return session
+}</div>
+<div class="step-row">
+<div class="step-container" id="97">
+<div class="step-ref passed">97</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def sleep = function(millis){ java.lang.Thread.sleep(millis) }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="98">
+<div class="step-ref passed">98</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def internatiocnalDateFormat =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="98">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="99">
+<div class="step-ref passed">99</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def yesterday =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="99">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</div>
+<div class="step-row">
+<div class="step-container" id="100">
+<div class="step-ref passed">100</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def futureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="100">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random future date generation</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="101">
+<div class="step-ref passed">101</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomFutureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="101">function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</div>
+<div class="step-row">
+<div class="step-container" id="102">
+<div class="step-ref passed">102</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def weekEnd =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="102">function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#* call read('classpath:Citibank/lop/CardAuthorization.feature')</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature')</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="103">
+<div class="step-ref passed">103</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/accounts/loans/eligibility'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="104">
+<div class="step-ref passed">104</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Authorization = access_token</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="105">
+<div class="step-ref passed">105</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header uuid = randomString(20)</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="106">
+<div class="step-ref passed">106</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="107">
+<div class="step-ref passed">107</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="108">
+<div class="step-ref passed">108</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">681</div>
+</div>
+<div class="preformatted" data-parent="108">15:33:01.437 request:
+1 &gt; GET https://sandbox.apihub.citi.com/gcb/api/v1/accounts/loans/eligibility
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5y8nZTt7ojCDyhwiUuaFPAA5pd_K0fA2uqRWAGrQNLAWoYnjATh4rLrRUkYwJHopN7T24WtviKpZtc9d-ddyMRoYTY-WcUVt43r1qZJ9erEpgsJ8nVMUmdQwTh2gmSzyXW1wEfcaEnOd5RM1Na9x8weFqU-KQ_uJ8KLLX7bB3799qwMj0Rgxs5_UAEWYMHWcq_xrm9BDCga3d0B_5AWgwfg
+1 &gt; Connection: Keep-Alive
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_211)
+1 &gt; client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &gt; uuid: 355-0170500-2229-164
+
+15:33:02.113 response time in milliseconds: 674.73
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Expose-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Max-Age: 2147483647
+1 &lt; Cache-Control: no-cache, no-store
+1 &lt; Citiuuid: c398f171-3bab-4a88-9ef2-e93e96dea722
+1 &lt; Client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 394
+1 &lt; Content-Type: application/json
+1 &lt; Date: Wed, 15 Jul 2020 10:03:02 GMT
+1 &lt; Expires: -1
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Wed, 15-Jul-2020 10:23:02 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; Uuid: 355-0170500-2229-164
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,pcr,onboard,mutualfund,moneymovementpayee,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:0
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f0ed455bfc6a89d
+1 &lt; X-Vcap-Request-Id: bd266a61-7fc9-43b8-737e-f66c001d9dee
+1 &lt; mfaCode: 5Oz%2FDzZnVfb%2BokmcKC%2FTTmmmaxdz%2B4FNXuipMZF1l%2BoEPQYzAS8NGOuNw4TmgwufHF%2Fi4DSHPGyRsDFs00pQiNgZwTV1i%2FAbNk2vq4XkGCZi5BbAc0Az4s4jF8VO9MVLRoXlC9e6EnySE%2BxuhjrW68qCg7WljwZCUQ1zQpb%2B0iwgWISakddtDETTm8UPpOSvNdQ7dBjfG1KBPSKeVUYphcXQK9v7FB2ZF2ozMupONNzDSzHn09ZzdsvoAmMPCR2o9%2BRtjTrCKb4gEP15qhWQk%2BbCPBAhauCnyGWe7myVexxzBc5bE%2BmWOtmG4rqIpL2lOIlTjiVtN%2F5XFqbmmJfHNgXcjFSgng0NW93C0kVkkDBXA4pxCEf0srLMU9AcCqGa3dUoIRN4OBrxZ%2BuUi5P0Wsu3TIFpAh6taygBeyAwEF0%3D
+{"loanEligibilityDetails":[{"accountId":"44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d","displayAccountNumber":"0056","lopSupportedAccountGroup":"CREDIT_CARD","maximumEligibleLoanAmount":500000.0,"minimumEligibleLoanAmount":50000.0,"offerIndicator":"RATE_BASED","interestCalculationMethod":"REDUCING_BALANCE_METHOD","lopCategory":"LOAN_OVER_PHONE"}]}</div>
+<div class="step-row">
+<div class="step-container" id="109">
+<div class="step-ref passed">109</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="110">
+<div class="step-ref passed">110</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="110">15:33:02.115 [print] {
+  "loanEligibilityDetails": [
+    {
+      "minimumEligibleLoanAmount": 50000.0,
+      "accountId": "44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d",
+      "interestCalculationMethod": "REDUCING_BALANCE_METHOD",
+      "offerIndicator": "RATE_BASED",
+      "lopSupportedAccountGroup": "CREDIT_CARD",
+      "displayAccountNumber": "0056",
+      "lopCategory": "LOAN_OVER_PHONE",
+      "maximumEligibleLoanAmount": 500000.0
+    }
+  ]
+}</div>
+<div class="step-row">
+<div class="step-container" id="111">
+<div class="step-ref passed">111</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.loanEligibilityDetails[0].displayAccountNumber == '#string'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="112">
+<div class="step-ref passed">112</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.loanEligibilityDetails[0].accountId == '#present'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="113">
+<div class="step-ref passed">113</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.loanEligibilityDetails[0].maximumEligibleLoanAmount == 500000</div>
+</div>
+<div class="time-cell passed">15</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="114">
+<div class="step-ref passed">114</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.loanEligibilityDetails[0].minimumEligibleLoanAmount == 50000</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="115">
+<div class="step-ref passed">115</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def displayAccountNumber = response.loanEligibilityDetails[0].displayAccountNumber</div>
+</div>
+<div class="time-cell passed">25</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="116">
+<div class="step-ref passed">116</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def accountId = response.loanEligibilityDetails[0].accountId</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="117">
+<div class="step-ref passed">117</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def maximumEligibleLoanAmount = response.loanEligibilityDetails[0].maximumEligibleLoanAmount</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="118">
+<div class="step-ref passed">118</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def minimumEligibleLoanAmount = response.loanEligibilityDetails[0].minimumEligibleLoanAmount</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="119">
+<div class="step-ref passed">119</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print displayAccountNumber</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="119">15:33:02.188 [print] 0056</div>
+<div class="step-row">
+<div class="step-container" id="120">
+<div class="step-ref passed">120</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print accountId</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="120">15:33:02.188 [print] 44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d</div>
+<div class="step-row">
+<div class="step-container" id="121">
+<div class="step-ref passed">121</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print maximumEligibleLoanAmount</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="121">15:33:02.189 [print] 500000.0</div>
+<div class="step-row">
+<div class="step-container" id="122">
+<div class="step-ref passed">122</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print minimumEligibleLoanAmount</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="122">15:33:02.189 [print] 50000.0</div>
+<div class="step-row">
+<div class="step-container" id="123">
+<div class="step-ref passed">123</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print '********* Checked Loan Eligibility And AccountId Generated *********'</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="123">15:33:02.195 [print] ********* Checked Loan Eligibility And AccountId Generated *********</div>
+<div class="step-row">
+<div class="step-container" id="124">
+<div class="step-ref passed">124</div>
+<div class="step-cell passed">* call read('classpath:Citibank/lop/Check_EPP_Plan.feature')</div>
+</div>
+<div class="time-cell passed">901</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="124.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-cell passed">Citibank/lop/Check_EPP_Plan.feature</div>
+</div>
+<div class="time-cell passed">871</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="125">
+<div class="step-ref passed">125</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* call read('classpath:reusable.feature')</div>
+</div>
+<div class="time-cell passed">41</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="125.1">
+<div class="step-ref passed">&gt;&gt;</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">reusable.feature</div>
+</div>
+<div class="time-cell passed">21</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random string will be generated. This is mainly used for the X-REQUEST-ID value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="126">
+<div class="step-ref passed">126</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomString =</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="preformatted" data-parent="126">function(s) {
+var text = "";
+var possible = "1234-567-890";
+for (var i = 0; i &lt; s; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+return text;
+}</div>
+<div class="step-row">
+<div class="step-container" id="127">
+<div class="step-ref passed">127</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def requestId = randomString(20)</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Current Time value is generated and assigned to a variable. This is used for the beneficiary value when creating a beneficiary</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="128">
+<div class="step-ref passed">128</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def now =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="128">function(){ return java.lang.System.currentTimeMillis() }</div>
+<div class="step-row">
+<div class="step-container" id="129">
+<div class="step-ref passed">129</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def currentTime = now()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random UUID value is generated and assigned to a variable. This is used for the deviceId value</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="130">
+<div class="step-ref passed">130</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomUUID =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="130">function(){ return java.util.UUID.randomUUID() + '' }</div>
+<div class="step-row">
+<div class="step-container" id="131">
+<div class="step-ref passed">131</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def uuid = randomUUID()</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#    TBC</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># * def tulipReferenceGen =</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># function(s) {</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var text = "";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   var possible = "abcdefghijklmnopqrstuv1234567890";</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   for (var i = 0; i &lt; s; i++)</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#     text += possible.charAt(Math.floor(Math.random() * possible.length));</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#   return text;</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># }</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment"># """</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="132">
+<div class="step-ref passed">132</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def getDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="132">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="133">
+<div class="step-ref passed">133</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def SimpleDateFormatDate = getDate()</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="134">
+<div class="step-ref passed">134</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def jsessionIDSplit =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="134">function(list)
+{
+ var session=list.split(" ", 14);
+ return session
+}</div>
+<div class="step-row">
+<div class="step-container" id="135">
+<div class="step-ref passed">135</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def sleep = function(millis){ java.lang.Thread.sleep(millis) }</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="136">
+<div class="step-ref passed">136</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def internatiocnalDateFormat =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="136">function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat("yyyy-MM-dd");
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</div>
+<div class="step-row">
+<div class="step-container" id="137">
+<div class="step-ref passed">137</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def yesterday =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="137">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var yesterday = currentDate.setDate(currentDate.getDate() - 1);
+    return sdf.format(yesterday)
+}</div>
+<div class="step-row">
+<div class="step-container" id="138">
+<div class="step-ref passed">138</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def futureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="138">function() {
+    var currentDate = new Date();
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+    var sdf = new SimpleDateFormat("yyyy-MM-dd");
+    var futureDate = currentDate.setDate(currentDate.getDate() + 1);
+    return sdf.format(futureDate)
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#Random future date generation</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="139">
+<div class="step-ref passed">139</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def randomFutureDate =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="139">function() {
+var today = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var futureDate = new Date();
+var randomNumber = Math.floor( Math.random()*(7-1))+1
+var futuredate=futureDate.setDate(today.getDate()+randomNumber)
+if(futureDate.getDay() === 0 || futureDate.getDay() === 6){
+ futuredate = futureDate.setDate(futureDate.getDate()+2) }
+return sdf.format(futuredate)
+}</div>
+<div class="step-row">
+<div class="step-container" id="140">
+<div class="step-ref passed">140</div>
+<div class="step-indent"> 
+</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* def weekEnd =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="140">function()
+{
+var weekend = new Date();
+var SimpleDateFormat = Java.type('java.text.SimpleDateFormat')
+var sdf = new SimpleDateFormat("yyyy-MM-dd");
+var differnece = 7-weekend.getDay();
+result = sdf.format(weekend.setDate(weekend.getDate()+differnece))
+return result
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#* call read('classpath:Citibank/lop/CardAuthorization.feature')</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature')</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell comment">#* call read('classpath:Citibank/lop/Loan_Eligibility.feature')</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="141">
+<div class="step-ref passed">141</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=50000'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="142">
+<div class="step-ref passed">142</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Authorization = access_token</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="143">
+<div class="step-ref passed">143</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header uuid = randomString(20)</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="144">
+<div class="step-ref passed">144</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="145">
+<div class="step-ref passed">145</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="146">
+<div class="step-ref passed">146</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">784</div>
+</div>
+<div class="preformatted" data-parent="146">15:33:02.286 request:
+1 &gt; GET https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=50000
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5y8nZTt7ojCDyhwiUuaFPAA5pd_K0fA2uqRWAGrQNLAWoYnjATh4rLrRUkYwJHopN7T24WtviKpZtc9d-ddyMRoYTY-WcUVt43r1qZJ9erEpgsJ8nVMUmdQwTh2gmSzyXW1wEfcaEnOd5RM1Na9x8weFqU-KQ_uJ8KLLX7bB3799qwMj0Rgxs5_UAEWYMHWcq_xrm9BDCga3d0B_5AWgwfg
+1 &gt; Connection: Keep-Alive
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_211)
+1 &gt; client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &gt; uuid: 18-62--821-43813----
+
+15:33:03.063 response time in milliseconds: 774.91
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Expose-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Max-Age: 2147483647
+1 &lt; Cache-Control: no-cache, no-store
+1 &lt; Citiuuid: 68ac1c23-ccae-4776-b560-351044259cc6
+1 &lt; Client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Wed, 15 Jul 2020 10:03:03 GMT
+1 &lt; Expires: -1
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Wed, 15-Jul-2020 10:23:03 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; Uuid: 18-62--821-43813----
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,pcr,onboard,mutualfund,moneymovementpayee,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:2
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f0ed4566ecbcb5f
+1 &lt; X-Vcap-Request-Id: 0a78880c-4802-4e0e-4464-22116e48aa21
+1 &lt; mfaCode: rr%2FGCrdhrPedtr3ZNyFWgWn9z8tBfH%2FgQSNTDBKD0ITYpu26MDzDuMkRaFR2F6hg2NIaw5UNXKTAJCYJv2vWRN0GEK6uV%2FfDbeFOGii%2Bzq2CiGaWkN8XQ36eTE85lyVPupVCbRKJoZJMaZxZR3MP0ypoNwiPxxW1%2BzwAXu0wBuymgU35MdUt%2FSo9StWcmyr0jPuUc4Zgfj%2BTBkLGdNnkUEQsoxRIvIjp%2FN2VXjfWlsmm6JAa6sWWtBy3xZZsM6uqG6UoQmnK1xS6gE%2Fe0CAw6I3sg4j5GzuXaiT5ROHlASYZkXhVm43rHQwKb%2FYHWPYKNruJiF5IcBs6Ot53JvPfZFk24525FS4m50BgVjiO8i2sZA9M%2F0EsbXSKRqMCXR2s8gqpj7g0KF%2BrfF8%2BhSRzkGCwYKDEuNCQjbsijMDf95Q%3D
+{"easyPaymentPlan":[{"tenor":"3","effectiveInterestRate":12.99,"annualPercentageRate":13.67,"installmentAmount":16666.67,"oneTimeProcessingFeeIndicator":"FIXED_AMOUNT","oneTimeProcessingFeeAmount":15.15,"oneTimeProcessingFeePercentage":0.75,"offerIndicator":"RATE_BASED"},{"tenor":"6","effectiveInterestRate":25.99,"annualPercentageRate":26.67,"installmentAmount":8333.34,"oneTimeProcessingFeeIndicator":"FIXED_AMOUNT","oneTimeProcessingFeeAmount":15.15,"oneTimeProcessingFeePercentage":0.75,"offerIndicator":"RATE_BASED"},{"tenor":"12","effectiveInterestRate":42.99,"annualPercentageRate":43.67,"installmentAmount":4166.67,"oneTimeProcessingFeeIndicator":"FIXED_AMOUNT","oneTimeProcessingFeeAmount":15.15,"oneTimeProcessingFeePercentage":0.75,"offerIndicator":"RATE_BASED"},{"tenor":"24","effectiveInterestRate":72.99,"annualPercentageRate":73.67,"installmentAmount":2083.34,"oneTimeProcessingFeeIndicator":"FIXED_AMOUNT","oneTimeProcessingFeeAmount":15.15,"oneTimeProcessingFeePercentage":0.75,"offerIndicator":"RATE_BASED"}]}</div>
+<div class="step-row">
+<div class="step-container" id="147">
+<div class="step-ref passed">147</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="148">
+<div class="step-ref passed">148</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="148">15:33:03.067 [print] {
+  "easyPaymentPlan": [
+    {
+      "tenor": "3",
+      "offerIndicator": "RATE_BASED",
+      "annualPercentageRate": 13.67,
+      "installmentAmount": 16666.67,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "effectiveInterestRate": 12.99,
+      "oneTimeProcessingFeeAmount": 15.15
+    },
+    {
+      "tenor": "6",
+      "offerIndicator": "RATE_BASED",
+      "annualPercentageRate": 26.67,
+      "installmentAmount": 8333.34,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "effectiveInterestRate": 25.99,
+      "oneTimeProcessingFeeAmount": 15.15
+    },
+    {
+      "tenor": "12",
+      "offerIndicator": "RATE_BASED",
+      "annualPercentageRate": 43.67,
+      "installmentAmount": 4166.67,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "effectiveInterestRate": 42.99,
+      "oneTimeProcessingFeeAmount": 15.15
+    },
+    {
+      "tenor": "24",
+      "offerIndicator": "RATE_BASED",
+      "annualPercentageRate": 73.67,
+      "installmentAmount": 2083.34,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "effectiveInterestRate": 72.99,
+      "oneTimeProcessingFeeAmount": 15.15
+    }
+  ]
+}</div>
+<div class="step-row">
+<div class="step-container" id="149">
+<div class="step-ref passed">149</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.easyPaymentPlan[0].tenor == '3'</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="150">
+<div class="step-ref passed">150</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.easyPaymentPlan[1].tenor == '6'</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="151">
+<div class="step-ref passed">151</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.easyPaymentPlan[2].tenor == '12'</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="152">
+<div class="step-ref passed">152</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* match response.easyPaymentPlan[3].tenor == '24'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="153">
+<div class="step-ref passed">153</div>
+<div class="step-indent"> 
+</div>
+<div class="step-cell passed">* print '*********Checked Easy payment plan using AccountId*********'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="153">15:33:03.097 [print] *********Checked Easy payment plan using AccountId*********</div>
+<div class="step-row">
+<div class="step-container" id="154">
+<div class="step-ref passed">154</div>
+<div class="step-cell passed">Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/easyPaymentPlans/repaymentSchedules?loanAmount=50000&amp;tenor=6'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="155">
+<div class="step-ref passed">155</div>
+<div class="step-cell passed">And header Authorization = access_token</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="156">
+<div class="step-ref passed">156</div>
+<div class="step-cell passed">And header uuid = randomString(20)</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="157">
+<div class="step-ref passed">157</div>
+<div class="step-cell passed">And header Accept = 'application/json'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="158">
+<div class="step-ref passed">158</div>
+<div class="step-cell passed">And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="159">
+<div class="step-ref passed">159</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">810</div>
+</div>
+<div class="preformatted" data-parent="159">15:33:03.110 request:
+1 &gt; GET https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d/easyPaymentPlans/repaymentSchedules?loanAmount=50000&amp;tenor=6
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer AAIkZjJmMDhjMTQtOGU1My00YjEzLTg2MmMtYmRmMTgyZDQ2ZGY5y8nZTt7ojCDyhwiUuaFPAA5pd_K0fA2uqRWAGrQNLAWoYnjATh4rLrRUkYwJHopN7T24WtviKpZtc9d-ddyMRoYTY-WcUVt43r1qZJ9erEpgsJ8nVMUmdQwTh2gmSzyXW1wEfcaEnOd5RM1Na9x8weFqU-KQ_uJ8KLLX7bB3799qwMj0Rgxs5_UAEWYMHWcq_xrm9BDCga3d0B_5AWgwfg
+1 &gt; Connection: Keep-Alive
+1 &gt; Cookie: CITI_SITE=gtdc
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_211)
+1 &gt; client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &gt; uuid: 7194149-0-22960-1619
+
+15:33:03.845 response time in milliseconds: 732.90
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Expose-Headers: Accept, Accept-Language, Authorization, businessCode, client_id, content-type, countryCode, ChannelId,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId, uuid, x-ibm-client-id,eventid,bizToken,citiuuid,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,clientDetails,x-fapi-customer-ip-address,x-fapi-customer-last-logged-time,x-fapi-financial-id,accept-compression,x-fapi-interaction-id,customerReferenceId,x-customer-user-agent,x-jws-signature,x-idempotency-key
+1 &lt; Access-Control-Max-Age: 2147483647
+1 &lt; Cache-Control: no-cache, no-store
+1 &lt; Citiuuid: 01e43944-7119-4b92-841b-1986dfb41fd0
+1 &lt; Client_id: f2f08c14-8e53-4b13-862c-bdf182d46df9
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Wed, 15 Jul 2020 10:03:03 GMT
+1 &lt; Expires: -1
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: CITI_SITE=gtdc; expires=Wed, 15-Jul-2020 10:23:03 GMT; path=/; domain=sandbox.apihub.citi.com; secure; HttpOnly
+1 &lt; Uuid: 7194149-0-22960-1619
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,pcr,onboard,mutualfund,moneymovementpayee,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:0
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; X-Global-Transaction-ID: 98b6a3705f0ed457bfc6ba6d
+1 &lt; X-Vcap-Request-Id: 4bdda4eb-9978-440d-58c7-a76f15f903df
+1 &lt; mfaCode: UCdh0%2BX%2BbseA6YL8PCfMbxnoVvBc1OcbQLWEFMZ893be1c43qcNM4U5gxv3KfXlgW03UL%2FD6fnAXLhK%2Bo1C8zo8RiQr6AsVcnlnaOJbcTic7Gdt9aZha0W50xSyezyUjaXU7IiQpe7reOiugF9oAa7A%2FtLwozLcLKE1U75p75SajLgDrDtGdHstYj%2Bos1AvVTlkjrc9KlA%2FlVpUOnUi7vgh%2BDyRHPbtchrj4Hq3%2BH4UbziY50T6NQ3PJlzhB2r7A%2F6yt6msjs5uqGNDl8MYVMs5n3V9inggCad6hnA1s%2FJTWVrO6Dv00dROHJBxF6Mw6qdg4%2BxYU%2Fd3NkhLKCx%2F8bgqDAcDR8%2FhBTpLolldG84AXbIL2ecg9gYqhPIAzLYmifLYk77cxaqC9EDo8FQhAOBsyahtTXil57NiRqBnyYpk%3D
+{"eppAmortizationSchedule":[{"installmentNumber":"1","installmentAmount":8333.34,"principalAmount":8333.34,"installmentInterestAmount":"5","outstandingPrincipalAmount":41666.66,"installmentDate":"07/2020"},{"installmentNumber":"2","installmentAmount":8333.34,"principalAmount":8333.34,"installmentInterestAmount":"5","outstandingPrincipalAmount":33333.32,"installmentDate":"08/2020"},{"installmentNumber":"3","installmentAmount":8333.34,"principalAmount":8333.34,"installmentInterestAmount":"5","outstandingPrincipalAmount":24999.98,"installmentDate":"09/2020"},{"installmentNumber":"4","installmentAmount":8333.34,"principalAmount":8333.34,"installmentInterestAmount":"5","outstandingPrincipalAmount":16666.64,"installmentDate":"10/2020"},{"installmentNumber":"5","installmentAmount":8333.34,"principalAmount":8333.34,"installmentInterestAmount":"5","outstandingPrincipalAmount":8333.300000000003,"installmentDate":"11/2020"},{"installmentNumber":"6","installmentAmount":8333.34,"principalAmount":8333.34,"installmentInterestAmount":"5","outstandingPrincipalAmount":-0.040000000000873115,"installmentDate":"12/2020"}],"totalLoanCost":50000.0}</div>
+<div class="step-row">
+<div class="step-container" id="160">
+<div class="step-ref passed">160</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="161">
+<div class="step-ref passed">161</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="161">15:33:03.918 [print] {
+  "eppAmortizationSchedule": [
+    {
+      "installmentNumber": "1",
+      "installmentDate": "07/2020",
+      "outstandingPrincipalAmount": 41666.66,
+      "installmentAmount": 8333.34,
+      "principalAmount": 8333.34,
+      "installmentInterestAmount": "5"
+    },
+    {
+      "installmentNumber": "2",
+      "installmentDate": "08/2020",
+      "outstandingPrincipalAmount": 33333.32,
+      "installmentAmount": 8333.34,
+      "principalAmount": 8333.34,
+      "installmentInterestAmount": "5"
+    },
+    {
+      "installmentNumber": "3",
+      "installmentDate": "09/2020",
+      "outstandingPrincipalAmount": 24999.98,
+      "installmentAmount": 8333.34,
+      "principalAmount": 8333.34,
+      "installmentInterestAmount": "5"
+    },
+    {
+      "installmentNumber": "4",
+      "installmentDate": "10/2020",
+      "outstandingPrincipalAmount": 16666.64,
+      "installmentAmount": 8333.34,
+      "principalAmount": 8333.34,
+      "installmentInterestAmount": "5"
+    },
+    {
+      "installmentNumber": "5",
+      "installmentDate": "11/2020",
+      "outstandingPrincipalAmount": 8333.300000000003,
+      "installmentAmount": 8333.34,
+      "principalAmount": 8333.34,
+      "installmentInterestAmount": "5"
+    },
+    {
+      "installmentNumber": "6",
+      "installmentDate": "12/2020",
+      "outstandingPrincipalAmount": -0.040000000000873115,
+      "installmentAmount": 8333.34,
+      "principalAmount": 8333.34,
+      "installmentInterestAmount": "5"
+    }
+  ],
+  "totalLoanCost": 50000.0
+}</div>
+<div class="step-row">
+<div class="step-container" id="162">
+<div class="step-ref passed">162</div>
+<div class="step-cell passed">* match response.eppAmortizationSchedule[0].installmentNumber == '1'</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="163">
+<div class="step-ref passed">163</div>
+<div class="step-cell passed">* match response.eppAmortizationSchedule[1].installmentNumber == '2'</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="164">
+<div class="step-ref passed">164</div>
+<div class="step-cell passed">* match response.eppAmortizationSchedule[2].installmentNumber == '3'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="165">
+<div class="step-ref passed">165</div>
+<div class="step-cell passed">* match response.eppAmortizationSchedule[3].installmentNumber == '4'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="166">
+<div class="step-ref passed">166</div>
+<div class="step-cell passed">* match response.eppAmortizationSchedule[4].installmentNumber == '5'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="167">
+<div class="step-ref passed">167</div>
+<div class="step-cell passed">* match response.eppAmortizationSchedule[5].installmentNumber == '6'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="168">
+<div class="step-ref passed">168</div>
+<div class="step-cell passed">* print '*********Checked reschedule payment plan using AccountId And Tenor*********'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="168">15:33:03.947 [print] *********Checked reschedule payment plan using AccountId And Tenor*********</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

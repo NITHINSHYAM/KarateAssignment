@@ -1,0 +1,60 @@
+<testsuite failures="0" name="com/assignment3/Karate_Sathya/PDT_Eligibility_API.feature" skipped="0" tests="2" time="9.757468">
+  <testcase classname="com.assignment3.Karate_Sathya.PDT_Eligibility_API" name="Initiate the sourceAccounts &amp; destination Eligibility API with valid fields and verify the Expected Result" time="5.413357">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.PDT_Eligibility_Resource ............ passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.sourceAccounts == '#present' ............................. passed
+* match response.destinationSourceAcctCombinations == '#present' .......... passed
+* def source_AccountId = response.sourceAccounts[1].sourceAccountId ....... passed
+* def destination_AccountId = response.destinationSourceAcctCombinations[0].destinationAccountId . passed
+* print 'sourceAccountId : ' + source_AccountId ........................... passed
+* print 'destinationAccountId : '+ destination_AccountId .................. passed
+* print '********* Check PDT_Eligibility Details *********' ............... passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.Karate_Sathya.PDT_Eligibility_API" name="To verify the sourceAccounts &amp; destination Eligibility API with invalid accessToken" time="4.344111">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.PDT_Eligibility_Resource ............ passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.sourceAccounts == '#present' ............................. passed
+* match response.destinationSourceAcctCombinations == '#present' .......... passed
+* def source_AccountId = response.sourceAccounts[1].sourceAccountId ....... passed
+* def destination_AccountId = response.destinationSourceAcctCombinations[0].destinationAccountId . passed
+* print 'sourceAccountId : ' + source_AccountId ........................... passed
+* print 'destinationAccountId : '+ destination_AccountId .................. passed
+* print '********* Check PDT_Eligibility Details *********' ............... passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.PDT_Eligibility_Resource ............ passed
+And header Authorization = testData.invalid_authorization ................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 401 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'error' .......................................... passed
+* match response.code == 'unAuthorized' ................................... passed
+* match response.details == 'Authorization credential is missing or invalid' . passed
+* print '********* Check PDT_Eligibility with invalid_authorization Details *********' . passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,9 @@
+{
+  "transactionReferenceNumber":"115685675387",
+  "redemptionOrder":{
+    "transactionAmount": 2521,
+    "currencyCode": "HKD",
+    "pointsToRedeem": 10000,
+    "transactionDescription": "Completed"
+  }
+}

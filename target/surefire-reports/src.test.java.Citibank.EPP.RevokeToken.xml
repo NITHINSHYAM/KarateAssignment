@@ -1,0 +1,20 @@
+<testsuite failures="0" name="src/test/java/Citibank/EPP/RevokeToken.feature" skipped="0" tests="1" time="8.357021">
+  <testcase classname="src.test.java.Citibank.EPP.RevokeToken" name="Refresh the access token" time="8.357021">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/EPP/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/EPP/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/EPP/RefreshAccessToken.feature') .......... passed
+Given url 'https://qa.sandbox.apihub.citi.com/gcb/gp/api/cardAuth/oauth2/revoke' . passed
+And header Authorization = 'Basic MWFkMDE4NWItNTBmMi00ZjIxLThhYzMtZjM0MmU0NzA2ZTdlOmhBM2lIM2FBOGpDNW9BN2tZN2tCMGZWN3FHMHZKNWdON3BOM3dFM2VYOGlCMmpXNW1E' . passed
+And header client_id = '1ad0185b-50f2-4f21-8ac3-f342e4706e7e' ............. passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header Content-Type = 'application/x-www-form-urlencoded' ............. passed
+And form field token = refreshAccessToken ................................. passed
+And form field token_type_hint = 'access_token' ........................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* print '*********Revoked Token *********' ................................ passed</system-out>
+  </testcase>
+</testsuite>

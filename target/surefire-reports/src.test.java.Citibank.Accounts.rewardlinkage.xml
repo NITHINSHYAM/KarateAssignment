@@ -1,0 +1,19 @@
+<testsuite failures="0" name="src/test/java/Citibank/Accounts/rewardlinkage.feature" skipped="0" tests="1" time="4.302363">
+  <testcase classname="src.test.java.Citibank.Accounts.rewardlinkage" name="fetch access token  from  Citi BANK" time="4.302363">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def payloadRequest = read('classpath:Citibank/Accounts/payload.json') ... passed
+* call read('classpath:Citibank/Accounts/accessToken.feature') ............ passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage' . passed
+And header client_id = 'cf652567-f5be-4d34-a77f-98374ee4b293' ............. passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header Content-Type = 'application/json' .............................. passed
+And header Authorization = accessToken .................................... passed
+* print Authorization ..................................................... passed
+And request payloadRequest ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def rewardLinkCode = response.rewardLinkCode ............................ passed</system-out>
+  </testcase>
+</testsuite>

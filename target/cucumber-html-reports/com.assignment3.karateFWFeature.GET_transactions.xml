@@ -1,0 +1,110 @@
+<testsuite failures="0" name="com/assignment3/karateFWFeature/GET_transactions.feature" skipped="0" tests="3" time="28.346328">
+  <testcase classname="com.assignment3.karateFWFeature.GET_transactions" name="Initiate the Transactions API with valid fields and verify the Expected Result" time="7.77871">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/GET_Account.feature@Accounts') . passed
+Given url testData.baseURI + testData.TransactionResource+account_Id+testData.TransactionResource1+testData.transaction_Status . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* print response.transactions[0] .......................................... passed
+* print '********* Transactions Details Generated *********' .............. passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.karateFWFeature.GET_transactions" name="Initiate the Transactions API with valid fields and verify the Expected Result" time="8.044761">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/GET_Account.feature@Accounts') . passed
+Given url testData.baseURI + testData.TransactionResource+account_Id+testData.TransactionResource1+testData.transaction_Status . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* print response.transactions[0] .......................................... passed
+* print '********* Transactions Details Generated *********' .............. passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/GET_Account.feature@Accounts') . passed
+Given url testData.baseURI + testData.TransactionResource+testData.invalidCoountId+testData.TransactionResource1+testData.transaction_Status . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 400 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'invalid' ........................................ passed
+* match response.code == 'invalidRequest' ................................. passed
+* match response.details == 'Missing or invalid Parameters' ............... passed
+* print '********* Transactions invalidCoountId *********' ................ passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.karateFWFeature.GET_transactions" name="Initiate the Transactions API with valid fields and verify the Expected Result" time="12.522858">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/GET_Account.feature@Accounts') . passed
+Given url testData.baseURI + testData.TransactionResource+account_Id+testData.TransactionResource1+testData.transaction_Status . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* print response.transactions[0] .......................................... passed
+* print '********* Transactions Details Generated *********' .............. passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/GET_Account.feature@Accounts') . passed
+Given url testData.baseURI + testData.TransactionResource+testData.invalidCoountId+testData.TransactionResource1+testData.transaction_Status . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 400 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'invalid' ........................................ passed
+* match response.code == 'invalidRequest' ................................. passed
+* match response.details == 'Missing or invalid Parameters' ............... passed
+* print '********* Transactions invalidCoountId *********' ................ passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karateFWFeature/GET_Account.feature@Accounts') . passed
+Given url testData.baseURI + testData.TransactionResource+account_Id+testData.TransactionResource1+testData.invalid_Transaction_Status . passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 400 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'invalid' ........................................ passed
+* match response.code == 'invalidRequest' ................................. passed
+* match response.details == 'Missing or invalid Parameters' ............... passed
+* print '********* Transactions invalidCoountId *********' ................ passed</system-out>
+  </testcase>
+</testsuite>

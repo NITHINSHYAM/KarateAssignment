@@ -1,0 +1,17 @@
+{
+  "loanAmount":60000 ,
+  "disbursementOption": "PERSONAL_ACCOUNT",
+  "disbursementAccountId": "44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d",
+  "tenor": 12,
+  "bankDetails": {
+    "bankCode": "DBSSG0XXX",
+    "bankName": "HSBC Bank",
+    "branchCode": "10034",
+    "accountNumber": "5396100020088653"
+  },
+  "loanPurpose": "EDUCATION_OVERSEAS",
+  "employmentStatus": "PRIVATE_EMPLOYEE",
+  "occupationCode": "BUSINESS",
+  "highestEducationLevel": "GRADUATE",
+  "paymentReferenceId": 123456
+}

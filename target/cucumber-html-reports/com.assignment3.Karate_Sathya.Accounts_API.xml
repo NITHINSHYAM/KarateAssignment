@@ -1,0 +1,62 @@
+<testsuite failures="0" name="com/assignment3/Karate_Sathya/Accounts_API.feature" skipped="0" tests="2" time="17.689696">
+  <testcase classname="com.assignment3.Karate_Sathya.Accounts_API" name="Initiate the Account API with valid fields and verify the Expected Result" time="11.383272">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.Account_Resource .................... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.accountGroupSummary == '#present' ........................ passed
+* match response.accountGroupSummary[0].accountGroup == 'SAVINGS_AND_INVESTMENTS' . passed
+* match response.accountGroupSummary[1].accountGroup == 'CHECKING' ........ passed
+* match response.accountGroupSummary[2].accountGroup == 'CREDIT_CARD' ..... passed
+* def account_Id = response.accountGroupSummary[0].accounts[0].savingsAccountSummary.accountId . passed
+* print 'Account Id : ' + account_Id ...................................... passed
+* print '********* Account Summary Details Generated *********' ........... passed</system-out>
+  </testcase>
+  <testcase classname="com.assignment3.Karate_Sathya.Accounts_API" name="To verify the APIs request with invalid client_id" time="6.306424">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.Account_Resource .................... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.client_Id ................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.accountGroupSummary == '#present' ........................ passed
+* match response.accountGroupSummary[0].accountGroup == 'SAVINGS_AND_INVESTMENTS' . passed
+* match response.accountGroupSummary[1].accountGroup == 'CHECKING' ........ passed
+* match response.accountGroupSummary[2].accountGroup == 'CREDIT_CARD' ..... passed
+* def account_Id = response.accountGroupSummary[0].accounts[0].savingsAccountSummary.accountId . passed
+* print 'Account Id : ' + account_Id ...................................... passed
+* print '********* Account Summary Details Generated *********' ........... passed
+* call read('classpath:reusable.feature') ................................. passed
+* def testData = read('classpath:com/assignment3/karateFW/testdata/testData.json') . passed
+* call read('classpath:com/assignment3/karate_Sathya/Password_API.feature@ResourceOwner_Positive') . passed
+Given url testData.baseURI + testData.Account_Resource .................... passed
+And header Authorization = authorization .................................. passed
+And header Accept = testData.accept ....................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header client_id = testData.Invalid_client_Id ......................... passed
+When method get ........................................................... passed
+Then status 401 ........................................................... passed
+* print 'Response Time : ' + responseTime ................................. passed
+And assert responseTime &lt; 10000 ........................................... passed
+And match responseType == 'json' .......................................... passed
+* print response .......................................................... passed
+* match response.type == 'unAuthorized' ................................... passed
+* match response.code == '401' ............................................ passed
+* match response.details == 'Authorization credentials are missing or invalid' . passed
+* print '********* Account invalid ClientId Generated *********' .......... passed</system-out>
+  </testcase>
+</testsuite>

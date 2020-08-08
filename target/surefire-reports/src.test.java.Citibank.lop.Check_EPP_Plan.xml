@@ -1,0 +1,23 @@
+<testsuite failures="1" name="src/test/java/Citibank/lop/Check_EPP_Plan.feature" skipped="0" tests="1" time="0.612919">
+  <testcase classname="src.test.java.Citibank.lop.Check_EPP_Plan" name="check customer loan eligibility using access token" time="0.612919">
+    <failure message="Check_EPP_Plan.feature:11 - evaluation (js) failed: 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=50000', ReferenceError: &quot;accountId&quot; is not defined in &lt;eval&gt; at line number 1">* call read('classpath:reusable.feature') ................................. passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=50000' . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Check_EPP_Plan.feature:11 - evaluation (js) failed: 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=50000', ReferenceError: "accountId" is not defined in &lt;eval&gt; at line number 1&#13;
+	at ✽.Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/transactions/eligibility/easyPaymentPlan?eligbleLoanAmount=50000' (Check_EPP_Plan.feature:11)&#13;
+
+And header Authorization = access_token ................................... skipped
+And header uuid = randomString(20) ........................................ skipped
+And header Accept = 'application/json' .................................... skipped
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* match response.easyPaymentPlan[0].tenor == '3' .......................... skipped
+* match response.easyPaymentPlan[1].tenor == '6' .......................... skipped
+* match response.easyPaymentPlan[2].tenor == '12' ......................... skipped
+* match response.easyPaymentPlan[3].tenor == '24' ......................... skipped
+* print '*********Checked Easy payment plan using AccountId*********' ..... skipped</failure>
+  </testcase>
+</testsuite>

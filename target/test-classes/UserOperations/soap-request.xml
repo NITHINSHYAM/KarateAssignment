@@ -1,0 +1,11 @@
+
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:QueryUsageBalance xmlns:ns2="http://www.mycompany.com/usage/V1">
+            <ns2:UsageBalance>
+                <ns2:LicenseId>12341234</ns2:LicenseId>
+            </ns2:UsageBalance>
+        </ns2:QueryUsageBalance>
+    </S:Body>
+</S:Envelope>

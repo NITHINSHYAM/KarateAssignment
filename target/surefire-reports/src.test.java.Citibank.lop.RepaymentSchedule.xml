@@ -1,0 +1,24 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/RepaymentSchedule.feature" skipped="0" tests="1" time="7.13779">
+  <testcase classname="src.test.java.Citibank.lop.RepaymentSchedule" name="check customer loan eligibility using access token" time="7.13779">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/lop/Loan_Eligibility.feature') ............ passed
+* call read('classpath:Citibank/lop/Check_EPP_Plan.feature') .............. passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/creditCards/'+accountId+'/easyPaymentPlans/repaymentSchedules?loanAmount=50000&amp;tenor=6' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.eppAmortizationSchedule[0].installmentNumber == '1' ...... passed
+* match response.eppAmortizationSchedule[1].installmentNumber == '2' ...... passed
+* match response.eppAmortizationSchedule[2].installmentNumber == '3' ...... passed
+* match response.eppAmortizationSchedule[3].installmentNumber == '4' ...... passed
+* match response.eppAmortizationSchedule[4].installmentNumber == '5' ...... passed
+* match response.eppAmortizationSchedule[5].installmentNumber == '6' ...... passed
+* print '*********Checked reschedule payment plan using AccountId And Tenor*********' . passed</system-out>
+  </testcase>
+</testsuite>

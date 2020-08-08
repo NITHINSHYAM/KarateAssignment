@@ -1,0 +1,29 @@
+<testsuite failures="0" name="src/test/java/Citibank/EPP/RefreshAccessToken.feature" skipped="0" tests="1" time="3.904332">
+  <testcase classname="src.test.java.Citibank.EPP.RefreshAccessToken" name="Refresh the access token" time="3.904332">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/EPP/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/EPP/CardAuthorizationAccessToken.feature') . passed
+Given url 'https://qa.sandbox.apihub.citi.com/gcb/gp/api/cardAuth/oauth2/refresh' . passed
+And header Authorization = 'Basic MWFkMDE4NWItNTBmMi00ZjIxLThhYzMtZjM0MmU0NzA2ZTdlOmhBM2lIM2FBOGpDNW9BN2tZN2tCMGZWN3FHMHZKNWdON3BOM3dFM2VYOGlCMmpXNW1E' . passed
+And header client_id = '1ad0185b-50f2-4f21-8ac3-f342e4706e7e' ............. passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header Content-Type = 'application/x-www-form-urlencoded' ............. passed
+And form field grant_type = 'refresh_token' ............................... passed
+And form field refresh_token = refreshToken ............................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.refresh_token == '#string' ............................... passed
+* match response.refresh_token_expires_in == '#number' .................... passed
+* def refreshAccessToken = response.access_token .......................... passed
+* def refreshTokenType = response.token_type .............................. passed
+* def refresh_access_token = refreshTokenType+' '+refreshAccessToken ...... passed
+* print 'Refresh Access Token : '+refresh_access_token .................... passed
+* def refreshTokenNew = response.refresh_token ............................ passed
+* def resfreshTokenExpireIn = response.refresh_token_expires_in ........... passed
+* print 'Refresh Access Token : '+refreshTokenNew ......................... passed
+* print 'Expiration Duration : '+resfreshTokenExpireIn .................... passed
+* print '*********Refresh Token Generated*********' ....................... passed</system-out>
+  </testcase>
+</testsuite>

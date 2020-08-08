@@ -1,0 +1,25 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/LoanBooking.feature" skipped="0" tests="1" time="12.072489">
+  <testcase classname="src.test.java.Citibank.lop.LoanBooking" name="check customer loan eligibility using access token" time="12.072489">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* def loanBookingRequest = read('classpath:Citibank/lop/LoanBookingRequest.json') . passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/lop/Loan_Eligibility.feature') ............ passed
+* call read('classpath:Citibank/lop/Check_EPP_Plan.feature') .............. passed
+* call read('classpath:Citibank/lop/RepaymentSchedule.feature') ........... passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/accounts/'+accountId+'/loans/bookings' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+And header Content-Type = 'application/json' .............................. passed
+And request loanBookingRequest ............................................ passed
+When method post .......................................................... passed
+Then status 403 ........................................................... passed
+* print response .......................................................... passed
+* match response.moreInfo.controlFlowId == '#present' ..................... passed
+* def loanBookingControlFlowId = response.moreInfo.controlFlowId .......... passed
+* print loanBookingControlFlowId .......................................... passed
+* print '********* Loan Booked And Control FlowId Generated *********' .... passed</system-out>
+  </testcase>
+</testsuite>

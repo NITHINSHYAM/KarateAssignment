@@ -1,0 +1,32 @@
+<testsuite failures="0" name="src/test/java/Citibank/lop/LoanBookingConfirmation.feature" skipped="0" tests="1" time="12.338476">
+  <testcase classname="src.test.java.Citibank.lop.LoanBookingConfirmation" name="varify the loan booking confirmation after OTP varification" time="12.338476">
+    <system-out>* call read('classpath:reusable.feature') ................................. passed
+* call read('classpath:Citibank/lop/CardAuthorization.feature') ........... passed
+* call read('classpath:Citibank/lop/CardAuthorizationAccessToken.feature') . passed
+* call read('classpath:Citibank/lop/Loan_Eligibility.feature') ............ passed
+* call read('classpath:Citibank/lop/Check_EPP_Plan.feature') .............. passed
+* call read('classpath:Citibank/lop/RepaymentSchedule.feature') ........... passed
+* call read('classpath:Citibank/lop/LoanBooking.feature') ................. passed
+* call read('classpath:Citibank/lop/DisbursmentOption.feature') ........... passed
+* call read('classpath:Citibank/lop/BookedLoanRepayment.feature') ......... passed
+* call read('classpath:Citibank/lop/E2E_Key.feature') ..................... passed
+* call read('classpath:Citibank/lop/ValidateOTP.feature') ................. passed
+Given url 'https://sandbox.apihub.citi.com/gcb/api/v1/accounts/loans/bookings/confirmation' . passed
+And header Authorization = access_token ................................... passed
+And header uuid = randomString(20) ........................................ passed
+And header Accept = 'application/json' .................................... passed
+And header client_id = 'f2f08c14-8e53-4b13-862c-bdf182d46df9' ............. passed
+And header Content-Type = 'application/json' .............................. passed
+* def loanBookingConfirm = read('classpath:Citibank/lop/LoanBookingConfirmation.json') . passed
+* set loanBookingConfirm.controlFlowId = loanBookingControlFlowId ......... passed
+* print loanBookingConfirm ................................................ passed
+And request loanBookingConfirm ............................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def LoanReferenceId = response.loanReferenceId .......................... passed
+* match response.loanReferenceId == '#present' ............................ passed
+* print LoanReferenceId ................................................... passed
+* print '********* LoanReferenceId Generated *********' ................... passed</system-out>
+  </testcase>
+</testsuite>
